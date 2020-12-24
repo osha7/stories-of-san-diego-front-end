@@ -1,0 +1,9 @@
+.home {
+  background-color: pink;
+  background-image: url("graphic-sosd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 25em;
+}

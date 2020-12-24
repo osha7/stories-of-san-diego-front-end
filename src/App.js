@@ -16,13 +16,14 @@ function App() {
       <BrowserRouter>
         <div className="navbar" >
           <NavBar />
+          </div>
           <Route exact path='/' component={Home} />
           <Route exact path='/stories' component={Stories} />
           <Route exact path='/about' component={About} />
           <Route exact path='/contact-us' component={Contact} />
           <Route exact path='/admin' component={Admin} />
           <Route exact path='/admin-dashboard' component={AdminDashboard} />
-        </div>
+        
       </BrowserRouter>
     </div>
   );
