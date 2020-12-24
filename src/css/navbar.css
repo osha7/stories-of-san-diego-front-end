@@ -3,3 +3,16 @@
   /* border-bottom: 5px solid rgba(206, 79, 39); */
   border-bottom: 5px solid rgba(0, 115, 181);
 }
+
+.navbar-links {
+  float: right;
+}
+
+.navbar-header {
+  float: left;
+  font-size: 1.5em;
+  font-family: "Mrs Saint Delafield", cursive;
+  color: rgba(0, 115, 181);
+  margin-top: -2.5em;
+  margin-left: -2em;
+}

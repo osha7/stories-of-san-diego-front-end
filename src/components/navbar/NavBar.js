@@ -13,63 +13,67 @@ const link = {
 
 export const NavBar = () => {
   return (
-    
     <>
-      <NavLink
-        to="/"
-        exact
-        style={link}
-        activeStyle={{
-          color: "rgba(206, 79, 39)",
-        }}
-      >
-        Home
-      </NavLink>
+      <div className="navbar-header">
+        <h1>Stories of San Diego</h1>
+      </div>
+      <div className="navbar-links">
+        <NavLink
+          to="/"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          Home
+        </NavLink>
 
-      <NavLink
-        to="/stories"
-        exact
-        style={link}
-        activeStyle={{
-          color: "rgba(206, 79, 39)",
-        }}
-      >
-        Stories
-      </NavLink>
+        <NavLink
+          to="/stories"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          Stories
+        </NavLink>
 
-      <NavLink
-        to="/contact-us"
-        exact
-        style={link}
-        activeStyle={{
-          color: "rgba(206, 79, 39)",
-        }}
-      >
-        Contact Us
-      </NavLink>
+        <NavLink
+          to="/contact-us"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          Contact Us
+        </NavLink>
 
-      <NavLink
-        to="/about"
-        exact
-        style={link}
-        activeStyle={{
-          color: "rgba(206, 79, 39)",
-        }}
-      >
-        About
-      </NavLink>
+        <NavLink
+          to="/about"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          About
+        </NavLink>
 
-      <NavLink
-        to="/admin"
-        exact
-        style={link}
-        activeStyle={{
-          color: "rgba(206, 79, 39)",
-        }}
-      >
-        Admin
-      </NavLink>
+        <NavLink
+          to="/admin"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          Admin
+        </NavLink>
 
+      </div>
     </>
   );
 };
