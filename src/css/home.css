@@ -9,13 +9,13 @@
   border-bottom: 5px solid rgba(0, 115, 181);
 }
 
-.home-content {
+.home-headers {
   position: relative;
   /* background-color: salmon; */
   height: 25em;
 }
 
-.home-header {
+.first-h3 {
   padding-top: 1em;
   margin-top: 0;
   margin-bottom: 0.25em;
@@ -23,7 +23,7 @@
   color: rgba(206, 79, 39);
 }
 
-.home-content h3 {
+.home-headers h3 {
   padding-top: 0;
   padding-left: 10em;
   padding-right: 10em;
