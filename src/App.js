@@ -9,6 +9,7 @@ import {Contact} from './components/contact/Contact';
 import {Home} from './components/home/Home';
 import {Stories} from './components/storiespage/Stories';
 
+import {Footer} from './components/footer/footer'
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           <Route exact path='/admin-dashboard' component={AdminDashboard} />
         
       </BrowserRouter>
+      <div className="ftrr">
+        <Footer />  
+      </div>
     </div>
   );
 }
