@@ -1,7 +1,19 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import '../../css/home.css';
 
 export function Home(props) {
+    const [data, setData] = useState({stories: []})
+
+    const API_URL = "http://localhost:3000/"
+
+    useEffect(async () => {
+        console.log("here")
+        const response = await fetch(API_URL + "stories")
+        const fetchData = await response.json()
+        setData(fetchData)
+        console.log(data)
+    }, [])
+    
 
     return (
         <>
