@@ -18,6 +18,10 @@
   background-color: rgba(0, 115, 181);
 }
 
+.footer-links {
+  margin-top: 2em;
+}
+
 .col-1-of-4 {
   float: right;
   width: 15%;
@@ -34,4 +38,8 @@
 
 h2 {
   padding: 2em;
+}
+
+a {
+  color: white;
 }

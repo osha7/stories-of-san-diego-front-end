@@ -41,7 +41,7 @@ export function Home(props) {
         </div>
       )}
       <div className="home-headers-2">
-        <Link to="/contact" ><h3>Share YOUR Story with us</h3></Link>
+        <Link to="/contact-us" ><h3>Share YOUR Story with us</h3></Link>
       </div>
     </>
   );

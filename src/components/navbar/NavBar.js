@@ -43,17 +43,6 @@ export const NavBar = () => {
         </NavLink>
 
         <NavLink
-          to="/contact-us"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          Contact Us
-        </NavLink>
-
-        <NavLink
           to="/about"
           exact
           style={link}
@@ -62,6 +51,17 @@ export const NavBar = () => {
           }}
         >
           About
+        </NavLink>
+
+        <NavLink
+          to="/contact-us"
+          exact
+          style={link}
+          activeStyle={{
+            color: "rgba(206, 79, 39)",
+          }}
+        >
+          Contact Us
         </NavLink>
 
         <NavLink
