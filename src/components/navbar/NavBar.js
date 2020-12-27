@@ -1,6 +1,7 @@
 import React from "react";
 import '../../css/navbar.css';
 import { NavLink } from "react-router-dom";
+import SOSDLogo from '../../css/SOSD.svg'
 
 const link = {
   width: "100px",
@@ -15,6 +16,7 @@ export const NavBar = () => {
   return (
     <>
       <div className="navbar-header">
+        <img src={SOSDLogo} alt="SOSD logo" width="60" height="70" />
         <h1>Stories of San Diego</h1>
       </div>
       <div className="navbar-links">

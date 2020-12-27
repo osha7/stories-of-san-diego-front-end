@@ -17,4 +17,12 @@
   color: rgba(0, 115, 181);
   margin-top: -2.5em;
   margin-left: -1em;
+  display: flex;
+}
+
+.navbar-header img {
+  /* float: left; */
+  /* margin-top: 1em; */
+  padding-top: 1.5em;
+  padding-right: 0.5em;
 }

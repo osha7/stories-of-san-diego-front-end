@@ -35,7 +35,7 @@
 
 .home-headers-2 h3 {
   color: rgba(206, 79, 39);
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 .first-three-story-cards {
@@ -71,6 +71,7 @@
   text-transform: uppercase;
   padding: 0.25em 0.75em;
   margin-left: 1em;
+  border-radius: 0.25em;
 }
 
 .story-image {
