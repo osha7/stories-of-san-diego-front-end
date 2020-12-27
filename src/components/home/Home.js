@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../css/home.css";
 import ThreeStories from "./ThreeStories";
+import { Link } from 'react-router-dom'
 
 export function Home(props) {
   const [data, setData] = useState({ stories: [] });
@@ -40,7 +41,7 @@ export function Home(props) {
         </div>
       )}
       <div className="home-headers-2">
-        <h3>Share YOUR Story with us</h3>
+        <Link to="/contact" ><h3>Share YOUR Story with us</h3></Link>
       </div>
     </>
   );
