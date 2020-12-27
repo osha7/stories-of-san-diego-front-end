@@ -14,10 +14,14 @@ function ThreeStories(props) {
   return (
     <>
       {latestStories.map((story) => {
-        <div></div>;
+        //   console.log(story.summary),
+        return (
+            <div className="recent-stories" key={story.id}>
+                <img className="story-image" src={story.image} alt={story.contributor} />
+                <div className="story-summary">{story.summary}</div>
+            </div>
+        )
       })}
-      {/* {console.log("threeStories return:", latestStories)} */}
-      HERE
     </>
   );
 }
