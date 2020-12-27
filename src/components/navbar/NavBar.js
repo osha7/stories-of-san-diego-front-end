@@ -1,6 +1,6 @@
 import React from "react";
 import '../../css/navbar.css';
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const link = {
   width: "100px",
