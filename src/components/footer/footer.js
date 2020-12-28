@@ -3,37 +3,45 @@ import "../../css/footer.css";
 export const Footer = () => {
   return (
     <div className="footer">
-      <div className="row">
-        <div className="col-3-of-4">
-          <div className="footer-links">
-            <a href="/" alt="Home">
-              HOME
-            </a>
-            <br />
-            <a href="/stories" alt="Stories">
-              STORIES
-            </a>
-            <br />
-            <a href="/about" alt="About">
-              ABOUT
-            </a>
-            <br />
-            <a href="/contact-us" alt="Contact Us">
-              CONTACT US
-            </a>
-            <br />
-            <a href="/admin" alt="Admin">
-              ADMIN
-            </a>
-            <br />
-          </div>
-        </div>
-        <div className="col-1-of-4">
+      {/* <div className="row"> */}
+        {/* <div className="col-3-of-4"> */}
+          <ul className="nav">
+            <li className="nav__item">
+              <a href="/" alt="Home" className="nav__link">
+                HOME
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/stories" alt="Stories" className="nav__link">
+                STORIES
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/about" alt="About" className="nav__link">
+                ABOUT
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/contact-us" alt="Contact Us" className="nav__link">
+                CONTACT
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/admin" alt="Admin" className="nav__link">
+                ADMIN
+              </a>
+            </li>
+          </ul>
+          <p className="copyright">
+              © Copyright 2020 Stories of San Diego
+          </p>
+        {/* </div> */}
+        {/* <div className="col-1-of-4">
           <a href="/contact-us" alt="Read More">
             <h2>Become a Contributing Writer</h2>
           </a>
-        </div>
-      </div>
+        </div> */}
+       {/* </div> */}
     </div>
   );
 };
