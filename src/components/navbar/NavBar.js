@@ -20,61 +20,68 @@ export const NavBar = () => {
         <h1>Stories of San Diego</h1>
       </div>
       <div className="navbar-links">
-        <NavLink
-          to="/"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          Home
-        </NavLink>
-
-        <NavLink
-          to="/stories"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          Stories
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          About
-        </NavLink>
-
-        <NavLink
-          to="/contact-us"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          Contact Us
-        </NavLink>
-
-        <NavLink
-          to="/admin"
-          exact
-          style={link}
-          activeStyle={{
-            color: "rgba(206, 79, 39)",
-          }}
-        >
-          Admin
-        </NavLink>
-
+        <ul className="nav">
+          <li className="navbar__links">
+          <NavLink
+            to="/"
+            exact
+            style={link}
+            activeStyle={{
+              color: "rgba(206, 79, 39)",
+            }}
+          >
+            Home
+          </NavLink>
+          </li>
+          <li className="navbar__links">
+            <NavLink
+              to="/stories"
+              exact
+              style={link}
+              activeStyle={{
+                color: "rgba(206, 79, 39)",
+              }}
+            >
+              Stories
+            </NavLink>
+          </li>
+          <li className="navbar__links">
+            <NavLink
+              to="/about"
+              exact
+              style={link}
+              activeStyle={{
+                color: "rgba(206, 79, 39)",
+              }}
+            >
+              About
+            </NavLink>
+          </li>
+          <li className="navbar__links">
+            <NavLink
+              to="/contact-us"
+              exact
+              style={link}
+              activeStyle={{
+                color: "rgba(206, 79, 39)",
+              }}
+            >
+              Contact
+            </NavLink>
+          </li>
+          <li className="navbar__links">
+            <NavLink
+              to="/admin"
+              exact
+              style={link}
+              activeStyle={{
+                color: "rgba(206, 79, 39)",
+              }}
+            >
+              Admin
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </>
   );
