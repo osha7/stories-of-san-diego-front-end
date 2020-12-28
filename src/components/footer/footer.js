@@ -2,7 +2,8 @@ import "../../css/footer.css";
 
 export const Footer = () => {
   return (
-    <div className="footer">
+      <main className="footer-sections">
+    <section className="footer">
       {/* <div className="row"> */}
         {/* <div className="col-3-of-4"> */}
           <ul className="nav">
@@ -36,12 +37,14 @@ export const Footer = () => {
               © Copyright 2020 Stories of San Diego
           </p>
         {/* </div> */}
-        {/* <div className="col-1-of-4">
-          <a href="/contact-us" alt="Read More">
-            <h2>Become a Contributing Writer</h2>
-          </a>
-        </div> */}
+       
        {/* </div> */}
-    </div>
+    </section>
+     <aside className="contributing-writer">
+     <a href="/contact-us" alt="Read More">
+       <h2>Become a Contributing Writer</h2>
+     </a>
+   </aside>
+   </main>
   );
 };

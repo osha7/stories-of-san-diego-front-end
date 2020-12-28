@@ -1,31 +1,39 @@
+@media screen and (min-width: 700px) {
+  .footer-sections {
+    display: flex;
+  }
+}
+
 .footer {
   /* position: absolute; */
   /* bottom: 0;
   width: 100%;
   height: 12em; */
   grid-column: full-start / full-end;
-  padding: 2rem;
+  padding: 1rem;
   background-color: rgba(0, 115, 181);
+  flex: 6;
 }
 
 .nav {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   align-items: center;
 }
 
 .nav__link:link,
 .nav__link:visited {
-  margin-top: 2rem;
+  /* margin-top: 4rem; */
   margin-right: 2rem;
+  margin-top: 3.25em;
   font-size: 1.4rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   display: block;
 }
 
@@ -33,6 +41,7 @@
 .nav__link:active {
   background-color: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
+  border-radius: 0.25em;
 }
 
 .copyright {
@@ -43,6 +52,51 @@
   margin-left: auto;
   text-align: center;
   width: 70%;
+}
+
+.contributing-writer {
+  /* not going to allow growth or shrinkage: */
+  flex: 0 0 10em;
+  background-color: rgba(206, 79, 39);
+  background-image: url("SOSD.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-position-x: 99%;
+  background-position-y: 90%; */
+  background-size: 60%;
+}
+
+@media screen and (max-width: 615px) {
+  .contributing-writer {
+    background-size: 30%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contributing-writer {
+    background-size: 20%;
+  }
+}
+
+.contributing-writer h2 {
+  padding: 2em;
+  padding-top: 3.5em;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contributing-writer h2:hover,
+.contributing-writer h2:active {
+  transform: translateY(-5px);
+  text-shadow: 2px 2px rgba(0, 115, 181);
+}
+
+.contributing-writer a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* .row {

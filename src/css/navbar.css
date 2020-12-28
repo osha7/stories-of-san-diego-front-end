@@ -2,16 +2,18 @@
   padding: 4em;
   /* border-bottom: 5px solid rgba(206, 79, 39); */
   border-bottom: 5px solid rgba(0, 115, 181);
+  display: flex;
 }
 
 .navbar-links {
-  float: right;
+  /* grid-column: full-start / full-end; */
+  /* float: right; */
   font-size: 1.25em;
-  margin-right: -1em;
+  /* margin-right: -10em; */
 }
 
 .navbar-header {
-  float: left;
+  /* float: left; */
   font-size: 2em;
   font-family: "Mrs Saint Delafield", cursive;
   color: rgba(0, 115, 181);

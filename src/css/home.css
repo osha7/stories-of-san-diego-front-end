@@ -74,6 +74,12 @@
   border-radius: 0.25em;
 }
 
+.button-container a:hover,
+.button-container a:active {
+  transform: translateY(-3px);
+  box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
 .story-image {
   width: 100%;
   height: 100%;
