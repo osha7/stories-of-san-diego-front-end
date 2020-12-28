@@ -9,6 +9,7 @@
 .about-header {
   color: rgba(206, 79, 39);
   font-size: 1.5em;
+  margin-top: 2em;
 }
 
 .about-paragraphs {
@@ -35,4 +36,49 @@ p {
   /* text-align: left; */
   line-height: 22px;
   font-size: 1.15em;
+}
+
+.about-divider {
+  border-top: solid 1px black;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.about-divider-2 {
+  border-top: solid 1px lightgrey;
+  width: 60%;
+  margin: 2em auto;
+}
+
+@media screen and (min-width: 700px) {
+  .individual-cards {
+    display: flex;
+    padding-right: 15em;
+    padding-left: 15em;
+  }
+}
+
+.individual-cards:first-child {
+  margin-top: 2em;
+}
+
+.individual-cards:last-child {
+  margin-bottom: 2em;
+}
+
+.individual-cards img {
+  width: 10em;
+  height: 10em;
+  background-color: white;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 2em;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.individual-cards p {
+  color: black;
+  padding-right: 2em;
+  padding-left: 2em;
 }
