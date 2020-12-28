@@ -16,6 +16,15 @@
   margin: 5em;
 }
 
+.from-lindsay {
+  font-size: 3em;
+  font-family: "Mrs Saint Delafield", cursive;
+  color: rgba(0, 115, 181);
+  font-weight: 800;
+  float: right;
+  margin-right: 2em;
+}
+
 .about-image {
   width: 400px;
   height: 300px;
@@ -31,9 +40,6 @@
 }
 
 p {
-  /* margin: 1em; */
-  /* padding: 2em; */
-  /* text-align: left; */
   line-height: 22px;
   font-size: 1.15em;
 }
@@ -42,6 +48,7 @@ p {
   border-top: solid 1px black;
   width: 85%;
   margin: 0 auto;
+  margin-top: 3em;
 }
 
 .about-divider-2 {
@@ -74,7 +81,7 @@ p {
   object-fit: cover;
   border-radius: 50%;
   margin-top: 2em;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  opacity: 0.75;
 }
 
 .individual-cards p {

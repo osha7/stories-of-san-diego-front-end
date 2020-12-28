@@ -31,13 +31,14 @@ export function About() {
                 <p>
                 For me as an African American journalist and native San Diegan, this is a way for me to give back to my community by bringing world-class journalists to the table to tell stories and do the pieces that aren’t shortened by time or length.
                 </p>
+                <span className="from-lindsay">-Lindsay</span>
             </div>
             <div className="about-divider"> </div>
             <div className="people">
                 <section className="individual-cards">
                     <img src="https://i.imgur.com/bXzkn6l.jpg" alt="" className="individual-image" />
                     <span>
-                    <h2>Sasha Jones</h2>
+                    <h2>Samantha Jones</h2>
                     <p className="">Nulla anim velit culpa proident do commodo nostrud anim ex sunt ex. Est voluptate aliquip proident deserunt esse adipisicing veniam reprehenderit id enim. Nostrud elit officia minim aliquip aute veniam qui ad culpa officia velit.</p>
                     </span>
                 </section>
@@ -54,7 +55,7 @@ export function About() {
                 <section className="individual-cards">
                     <img src="https://i.imgur.com/kYT6Irz.jpg" alt="" className="individual-image" />
                     <span>
-                        <h2>Sasha Jones</h2>
+                        <h2>Samantha Jones</h2>
                         <p className="">Eiusmod exercitation consequat amet cillum deserunt fugiat non ad elit enim labore do. Ad mollit proident nostrud quis nulla. Ut mollit nulla adipisicing labore voluptate ex esse dolore.</p>
                     </span>
                 </section>
@@ -70,7 +71,7 @@ export function About() {
                 <section className="individual-cards">
                     <img src="https://i.imgur.com/wPR2HaO.jpg" alt="" className="individual-image" />
                     <span>
-                        <h2>Sasha Jones</h2>
+                        <h2>Samantha Jones</h2>
                         <p className="">Ut labore laboris velit non ad incididunt do laborum magna aute culpa id eu. Voluptate voluptate ad ad eu tempor duis esse. Aute occaecat fugiat excepteur qui commodo aliqua eu. Reprehenderit ad quis cupidatat dolor sit incididunt consectetur. Excepteur id elit exercitation veniam veniam.</p>
                     </span>
                 </section>
@@ -78,7 +79,7 @@ export function About() {
                 <section className="individual-cards">
                     <img src="https://i.imgur.com/COUkfn0.jpg" alt="" className="individual-image" />
                     <span>
-                        <h2>Sasha Jones</h2>
+                        <h2>Samantha Jones</h2>
                         <p className="">Tempor dolore anim eu non ex ut eiusmod enim culpa aliqua. Aute dolore aliquip sint velit ut ullamco culpa. Duis voluptate anim est et irure ex duis nisi fugiat velit commodo. Et sint irure quis dolor eiusmod. Fugiat non elit enim ad deserunt irure dolore Lorem ad laboris Lorem laboris qui do.</p>
                     </span>
                 </section>
