@@ -1,0 +1,38 @@
+.about-container {
+  transform: translate(8%, 0);
+  width: 85%;
+  padding: 0 1em 3em 1em;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.about-header {
+  color: rgba(206, 79, 39);
+  font-size: 1.5em;
+}
+
+.about-paragraphs {
+  margin: 5em;
+}
+
+.about-image {
+  width: 400px;
+  height: 300px;
+  margin-top: 6em;
+  margin-right: -3em;
+  background-image: url(field.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1%;
+  float: right;
+  shape-outside: content-box;
+}
+
+p {
+  /* margin: 1em; */
+  /* padding: 2em; */
+  /* text-align: left; */
+  line-height: 22px;
+  font-size: 1.15em;
+}
