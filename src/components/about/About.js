@@ -2,7 +2,6 @@
 // rfce
 import React from 'react';
 import "../../css/about.css";
-import AboutPhoto from '../../css/field.jpg'
 
 export function About() {
     
