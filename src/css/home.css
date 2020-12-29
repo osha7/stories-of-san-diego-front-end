@@ -1,100 +1,101 @@
 .home-image {
-  /* background-color: pink; */
-  background-image: url("stopracism.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 28em;
-  border-bottom: 5px solid rgba(0, 115, 181);
+    /* background-color: pink; */
+    background-image: url("stopracism.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 28em;
+    border-bottom: 5px solid rgba(0, 115, 181);
 }
 
 .home-headers {
-  position: relative;
-  /* background-color: salmon; */
-  height: 100%;
-  margin-bottom: 0;
+    position: relative;
+    /* background-color: salmon; */
+    height: 100%;
+    margin-bottom: 0;
 }
 .home-headers h1 {
-  padding-top: 1em;
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  font-size: 3em;
-  color: rgba(206, 79, 39);
+    padding-top: 1em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 3em;
+    color: rgba(206, 79, 39);
 }
 
 .home-headers h3 {
-  padding-top: 0;
-  padding-left: 10em;
-  padding-right: 10em;
-  margin-top: 0;
-  margin-bottom: 0;
-  /* background-color: red; */
-  color: rgba(206, 79, 39);
+    padding-top: 0;
+    padding-left: 10em;
+    padding-right: 10em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2em;
+    /* background-color: red; */
+    color: rgba(206, 79, 39);
 }
 
 .home-headers-2 h3 {
-  color: rgba(206, 79, 39);
-  margin-bottom: 4em;
+    color: rgba(206, 79, 39);
+    margin-bottom: 4em;
 }
 
 .first-three-story-cards {
-  /* padding: 5em; */
-  margin: 3rem;
-  display: flex;
-  justify-content: space-around;
+    /* padding: 5em; */
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 .recent-stories {
-  position: relative;
-  width: 18em;
-  height: 18em;
-  margin: 1em;
-  background-color: rgba(206, 79, 39);
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    width: 18em;
+    height: 18em;
+    margin: 1em;
+    background-color: rgba(206, 79, 39);
+    display: flex;
+    flex-direction: column;
 }
 
 .button-container {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 66%;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 66%;
 }
 
 .button-container a {
-  position: absolute;
-  top: 1em;
-  left: -4em;
-  background-color: rgba(206, 79, 39);
-  color: white;
-  text-transform: uppercase;
-  padding: 0.25em 0.75em;
-  margin-left: 1em;
-  border-radius: 0.25em;
+    position: absolute;
+    top: 1em;
+    left: -4em;
+    background-color: rgba(206, 79, 39);
+    color: white;
+    text-transform: uppercase;
+    padding: 0.25em 0.75em;
+    margin-left: 1em;
+    border-radius: 0.25em;
 }
 
 .button-container a:hover,
 .button-container a:active {
-  transform: translateY(-3px);
-  box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 
 .story-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
 }
 
 .story-summary {
-  background-color: rgba(206, 79, 39);
-  color: white;
-  height: 33%;
-  display: flex;
-  justify-content: center;
+    background-color: rgba(206, 79, 39);
+    color: white;
+    height: 33%;
+    display: flex;
+    justify-content: center;
 }
 
 .story-summary h4 {
-  padding: 0.5em 1em;
+    padding: 0.5em 1em;
 }
