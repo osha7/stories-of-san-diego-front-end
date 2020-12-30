@@ -8,6 +8,7 @@ import {AdminDashboard} from './components/admin/AdminDashboard';
 import {Contact} from './components/contact/Contact';
 import {Home} from './components/home/Home';
 import {Stories} from './components/storiespage/Stories';
+import Signup from './components/signup/signup'
 
 import {Footer} from './components/footer/footer'
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/about' component={About} />
           <Route exact path='/contact-us' component={Contact} />
           <Route exact path='/admin' component={Admin} />
+          <Route exact path='/signup-private' component={Signup} />
           <Route exact path='/admin-dashboard' component={AdminDashboard} />
         
       </BrowserRouter>
