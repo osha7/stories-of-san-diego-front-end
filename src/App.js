@@ -8,7 +8,7 @@ import {AdminDashboard} from './components/admin/AdminDashboard';
 import {Contact} from './components/contact/Contact';
 import {Home} from './components/home/Home';
 import {Stories} from './components/storiespage/Stories';
-import Signup from './components/signup/signup'
+import Signup from './components/admin/Signup'
 
 import {Footer} from './components/footer/footer'
 

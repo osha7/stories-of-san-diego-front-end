@@ -1,68 +1,53 @@
-import React from "react";
 import "../../css/admin.css";
+import LoginForm from './LoginForm'
+import SignupForm from './Signup'
+import React, { useState, useEffect } from 'react'
 
 export function Admin(props) {
+
+    const [user, setUser] = useState({})
+    // const [form, setForm] = useState('')
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        console.log("token1", token)
+        if (token) {
+            fetch('http://localhost:3000/auto_login', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("data", data)
+                setUser(data)
+            })
+        }
+    }, [])
+
+    const handleLogin = () => {
+        setUser(user)
+    }
+
+    const handleAuthClick = () => {
+        console.log('Here')
+        // debugger
+        const token = localStorage.getItem("token")
+        fetch('http://localhost:3000/user_is_authorized', {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => console.log("handleAuthClick", data))
+    }
+
+
     return (
-        <div class="login-wrap">
-            <div class="login-html">
-                <input
-                    id="tab-1"
-                    type="radio"
-                    name="tab"
-                    class="sign-in"
-                    checked
-                />
-                <label for="tab-1" class="tab">
-                    Sign In
-                </label>
-                <input id="tab-2" type="radio" name="tab" class="sign-up" />
-                <label for="tab-2" class="tab">
-                    Sign Up
-                </label>
-                <div class="login-form">
-                    <div class="sign-in-htm">
-                        <div class="group">
-                            <label for="user" class="label">
-                                Username
-                            </label>
-                            <input id="user" type="text" class="input" />
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">
-                                Email Address
-                            </label>
-                            <input id="pass" type="text" class="input" />
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">
-                                Password
-                            </label>
-                            <input
-                                id="pass"
-                                type="password"
-                                class="input"
-                                data-type="password"
-                            />
-                        </div>
-                        <div class="group">
-                            <input
-                                type="submit"
-                                class="button"
-                                value="Sign In"
-                            />
-                        </div>
-                        <div class="hr"></div>
-                    </div>
-                    <div class="sign-up-htm">
-                        <div class="hr"></div>
-                        <h3>
-                            Please Get In Contact With Admin To Secure Your
-                            Credentials
-                        </h3>
-                        <div class="hr"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <>
+        <LoginForm handleLogin={handleLogin}/>
+        {/* <SignupForm handleLogin={handleLogin}/> */}
+        {/* <button onClick={handleAuthClick} className="ui button">Access Authorized Route</button> */}
+        </>
     );
 }

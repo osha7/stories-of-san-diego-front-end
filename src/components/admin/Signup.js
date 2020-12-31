@@ -5,6 +5,8 @@ function Signup(props) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const [user, setUser] = useState({})
+
     const handleUsernameChange = (e) => {
         setUsername(e.target.value)
     }
@@ -13,6 +15,10 @@ function Signup(props) {
     }
     const handlePasswordChange = (e) => {
         setPassword(e.target.value)
+    }
+
+    const handleLogin = () => {
+        setUser(user)
     }
 
     const handleSubmit = (e) => {
@@ -31,8 +37,9 @@ function Signup(props) {
         })
         .then(res => res.json())
         .then(data => {
+            console.log(data, data.jwt)
             localStorage.setItem("token", data.jwt)
-            props.handleLogin(data.user)
+            props.handleLogin ? props.handleLogin(data.user) : handleLogin(data.user)
         })
         setUsername('')
         setEmail('')
