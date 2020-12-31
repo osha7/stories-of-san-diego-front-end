@@ -1,6 +1,6 @@
 import "../../css/admin.css";
 import LoginForm from './LoginForm'
-import SignupForm from './Signup'
+// import SignupForm from './Signup'
 import React, { useState, useEffect } from 'react'
 
 export function Admin(props) {
@@ -29,18 +29,18 @@ export function Admin(props) {
         setUser(user)
     }
 
-    const handleAuthClick = () => {
-        console.log('Here')
-        // debugger
-        const token = localStorage.getItem("token")
-        fetch('http://localhost:3000/user_is_authorized', {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        .then(res => res.json())
-        .then(data => console.log("handleAuthClick", data))
-    }
+    // const handleAuthClick = () => {
+    //     console.log('Here')
+    //     // debugger
+    //     const token = localStorage.getItem("token")
+    //     fetch('http://localhost:3000/user_is_authorized', {
+    //         headers: {
+    //             Authorization: `Bearer ${token}`
+    //         }
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => console.log("handleAuthClick", data))
+    // }
 
 
     return (
