@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import "../../css/admin.css";
 
 export function AdminDashboard(props) {
-    const [state, setState] = useState({
+    const [userInput, setUserInput] = useReducer(
+        (state, newState) => ({...state, ...newState}), {
         date: "",
         transcriber: "",
         contributor: "",
@@ -12,28 +13,28 @@ export function AdminDashboard(props) {
         story: "",
         image: "",
     });
-    const date = state.date;
-    const transcriber = state.transcriber;
-    const contributor = state.contributor;
-    const contact_email = state.contact_email;
-    const contact_phone = state.contact_phone;
-    const summary = state.summary;
-    const story = state.story;
-    const image = state.image;
+    const date = userInput.date;
+    const transcriber = userInput.transcriber;
+    const contributor = userInput.contributor;
+    const contact_email = userInput.contact_email;
+    const contact_phone = userInput.contact_phone;
+    const summary = userInput.summary;
+    const story = userInput.story;
+    const image = userInput.image;
 
     const handleOnChange = (e) => {
-        setState({
+        setUserInput({
             [e.target.name]: e.target.value,
         });
     };
 
     const handleSubmit = (e) => {
-        console.log("Dashboard Submit", state)
+        console.log("Dashboard Submit", userInput)
         e.preventDefault();
-
+        // debugger
         fetch('http://localhost:3000/create', {
             method: "POST",
-            headrs: {
+            headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
@@ -52,7 +53,7 @@ export function AdminDashboard(props) {
         .then(data => {
             console.log(data)
         })
-        setState({
+        setUserInput({
             date: "",
             transcriber: "",
             contributor: "",
