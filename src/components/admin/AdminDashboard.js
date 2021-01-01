@@ -67,13 +67,13 @@ export function AdminDashboard(props) {
 
     if (localStorage.getItem("token")) {
         return (
-            <>
+            <div className="stories">
                 {/* {console.log("admin-dashboard", props)} */}
-                <h1>SUBMIT A STORY HERE</h1>
+                <h1>Submit A Story Here</h1>
                 <div className="story-form">
                     <form className="form-story-input" onSubmit={handleSubmit}>
                         <div className="si-form">
-                            <label className="">Date: </label>
+                            <label className="story-form-label">Date: </label>
                             <input
                                 name="date"
                                 type="date"
@@ -84,7 +84,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Transcriber: </label>
+                            <label className="story-form-label">Transcriber: </label>
                             <input
                                 name="transcriber"
                                 type="text"
@@ -95,7 +95,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Contributor: </label>
+                            <label className="story-form-label">Contributor: </label>
                             <input
                                 name="contributor"
                                 type="text"
@@ -106,7 +106,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Contact Email: </label>
+                            <label className="story-form-label">Contact Email: </label>
                             <input
                                 name="contact_email"
                                 type="email"
@@ -117,7 +117,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Contact Phone: </label>
+                            <label className="story-form-label">Contact Phone: </label>
                             <input
                                 name="contact_phone"
                                 type=""
@@ -128,7 +128,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Image: </label>
+                            <label className="story-form-label">Image: </label>
                             <input
                                 name="image"
                                 type="text"
@@ -139,7 +139,7 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Summary: </label>
+                            <label className="story-form-label">Summary: </label>
                             <input
                                 name="summary"
                                 type="text"
@@ -150,11 +150,11 @@ export function AdminDashboard(props) {
                             />
                         </div>
                         <div className="si-form">
-                            <label className="">Story: </label> <br />
+                            <label className="story-form-label">Story: </label> <br />
                             <textarea
                                 name="story"
                                 type="text"
-                                cols="60" rows="10"
+                                cols="60" rows="20"
                                 value={story}
                                 onChange={handleOnChange}
                                 className="story-input"
@@ -167,11 +167,11 @@ export function AdminDashboard(props) {
                         
                     </form>
                 </div>
-            </>
+            </div>
         );
     } else {
         return (
-            <div>
+            <div className="stories">
                 <h1>You Must Be Logged In To View Page</h1>
             </div>
         );

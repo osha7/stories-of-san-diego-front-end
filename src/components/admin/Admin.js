@@ -71,7 +71,7 @@ export function Admin(props) {
             <>
             {console.log("have a user", user)}
                 {/* <button onClick={handleLogout}>Log Out</button> */}
-                <button onClick={handleLogout}>Log Out</button>
+                <button className="logout-button" onClick={handleLogout}>Log Out</button>
                 <AdminDashboard user={user}/>
             </>
         )
