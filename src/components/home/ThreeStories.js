@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import StoriesDiv from '../storiespage/StoriesDiv'
 
 function ThreeStories(props) {
   const latestStory = props.stories[props.stories.length - 1];
@@ -13,26 +14,7 @@ function ThreeStories(props) {
 
   return (
     <>
-      {latestStories.map((story) => {
-        //   console.log(story.summary),
-        return (
-          <div className="recent-stories" key={story.id}>
-            <div className="button-container">
-              <img
-                className="story-image"
-                src={story.image}
-                alt={story.contributor}
-              />
-              <a href="#" alt="Read More">
-                Read More
-              </a>
-            </div>
-            <div className="story-summary">
-              <h4>{story.summary}</h4>
-            </div>
-          </div>
-        );
-      })}
+      <StoriesDiv latestStories={latestStories} />
     </>
   );
 }

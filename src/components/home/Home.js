@@ -2,22 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../../css/home.css";
 import ThreeStories from "./ThreeStories";
 import { Link } from "react-router-dom";
+import{ useFetchStoriesData } from '../storiespage/useFetchStoriesData'
 
 export function Home(props) {
-    const [data, setData] = useState({ stories: [] });
-    
-    const API_URL = "http://localhost:3000/";
-
-    useEffect(() => {
-        // console.log("here")
-        const fetchStories = async () => {
-            const response = await fetch(API_URL + "stories");
-            const fetchData = await response.json();
-            setData(fetchData);
-        };
-        // console.log(data)
-        fetchStories();
-    }, []);
+    const [data] = useFetchStoriesData()
+    console.log(data)
 
     return (
         <>

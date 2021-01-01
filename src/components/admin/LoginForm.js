@@ -75,6 +75,7 @@ function LoginForm(props) {
                                     type="text"
                                     className="input"
                                     onChange={handleUsernameChange}
+                                    required
                                 />
                             </div>
                             <div className="group">
@@ -87,6 +88,7 @@ function LoginForm(props) {
                                     type="text"
                                     className="input"
                                     onChange={handleEmailChange}
+                                    required
                                 />
                             </div>
                             <div className="group">
@@ -100,6 +102,7 @@ function LoginForm(props) {
                                     className="input"
                                     data-type="password"
                                     onChange={handlePasswordChange}
+                                    required
                                 />
                             </div>
                             <div className="group">
