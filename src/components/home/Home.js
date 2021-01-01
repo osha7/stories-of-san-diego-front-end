@@ -24,7 +24,7 @@ export function Home(props) {
                 </h3>
             </div>
             {data.stories.length > 0 && (
-                <div className="first-three-story-cards">
+                <div className="latest-story-card-divs">
                     {/* {console.log("mapping", data.stories.length === 0)} */}
                     <ThreeStories stories={data.stories} />
                 </div>
