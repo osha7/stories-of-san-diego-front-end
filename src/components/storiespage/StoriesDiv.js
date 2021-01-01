@@ -3,10 +3,9 @@ import React from "react";
 function StoriesDiv(props) {
     console.log(props);
     
-    
     return (
         <>
-            {props.latestStories.map((story) => {
+            {props.stories.map((story) => {
                 //   console.log(story.summary),
                 return (
                     <div className="recent-stories" key={story.id}>
