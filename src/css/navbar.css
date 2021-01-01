@@ -1,40 +1,46 @@
 .navbar {
-  padding: 4em 4em 0 2em;
-  border-bottom: 5px solid rgba(0, 115, 181);
-  display: flex;
+    padding: 4em 4em 0 2em;
+    border-bottom: 5px solid rgba(0, 115, 181);
+    display: flex;
 }
 
 .navbar-links {
-  grid-column: full-start / full-end;
-  flex: 1;
-  font-size: 1.4em;
-  margin-right: -1em;
-  margin-top: -1em;
+    grid-column: full-start / full-end;
+    flex: 1;
+    font-size: 1.4em;
+    margin-right: -1em;
+    margin-top: -1em;
 }
 
 .navbar-links .nav {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  grid-gap: 0.25rem;
-  align-items: center;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    grid-gap: 0.25rem;
+    align-items: center;
 }
 
 .navbar__links:hover,
 .navbar__links:active {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .navbar-header {
-  font-size: 2em;
-  font-family: "Mrs Saint Delafield", cursive;
-  color: rgba(0, 115, 181);
-  margin-top: -2.5em;
-  display: flex;
-  flex: 1;
+    font-size: 2em;
+    font-family: "Mrs Saint Delafield", cursive;
+    color: rgba(0, 115, 181);
+    margin-top: -2.5em;
+    display: flex;
+    flex: 1;
 }
 
 .navbar-header img {
-  padding-top: 1.5em;
-  padding-right: 0.5em;
+    padding-top: 1.5em;
+    padding-right: 0.5em;
+}
+
+ion-icon {
+    color: rgba(206, 79, 39);
+    margin-left: -2em;
+    --ionicon-stroke-width: 3em;
 }
