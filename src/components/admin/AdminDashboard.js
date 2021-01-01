@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "../../css/admin.css";
 
 export function AdminDashboard(props) {
-    const [state, setstate] = useState({
+    const [state, setState] = useState({
         date: "",
         transcriber: "",
         contributor: "",
@@ -20,96 +21,149 @@ export function AdminDashboard(props) {
     const story = state.story;
     const image = state.image;
 
+    const handleOnChange = (e) => {
+        setState({
+            [e.target.name]: e.target.value,
+        });
+    };
+
     const handleSubmit = (e) => {
+        console.log("Dashboard Submit", state)
         e.preventDefault();
+
+        fetch('http://localhost:3000/create', {
+            method: "POST",
+            headrs: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                date,
+                transcriber,
+                contributor,
+                contact_email,
+                contact_phone,
+                summary,
+                story,
+                image
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        setState({
+            date: "",
+            transcriber: "",
+            contributor: "",
+            contact_email: "",
+            contact_phone: "",
+            summary: "",
+            story: "",
+            image: "",
+        })
     };
 
     if (localStorage.getItem("token")) {
         return (
             <>
-                {console.log("admin-dashboard", props)}
+                {/* {console.log("admin-dashboard", props)} */}
                 <h1>SUBMIT A STORY HERE</h1>
-                <div>
-                    <form className="story-form" onSubmit={handleSubmit}>
-                        <label className="">Date:</label>
-                        <input
-                            name=""
-                            type=""
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">transcriber</label>
-                        <input
-                            name="transcriber"
-                            type=""
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">contributor</label>
-                        <input
-                            name=""
-                            type="contributor"
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">contact_email</label>
-                        <input
-                            name=""
-                            type="contact_email"
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">contact_phone</label>
-                        <input
-                            name="contact_phone"
-                            type=""
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">summary</label>
-                        <input
-                            name=""
-                            type="summary"
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">story</label>
-                        <input
-                            name=""
-                            type="story"
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
-
-                        <label className="">image</label>
-                        <input
-                            name=""
-                            type="image"
-                            value=""
-                            onChange=""
-                            className=""
-                            required
-                        ></input>
+                <div className="story-form">
+                    <form className="form-story-input" onSubmit={handleSubmit}>
+                        <div className="si-form">
+                            <label className="">Date: </label>
+                            <input
+                                name="date"
+                                type="date"
+                                value={date}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Transcriber: </label>
+                            <input
+                                name="transcriber"
+                                type="text"
+                                value={transcriber}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Contributor: </label>
+                            <input
+                                name="contributor"
+                                type="text"
+                                value={contributor}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Contact Email: </label>
+                            <input
+                                name="contact_email"
+                                type="email"
+                                value={contact_email}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Contact Phone: </label>
+                            <input
+                                name="contact_phone"
+                                type=""
+                                value={contact_phone}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Image: </label>
+                            <input
+                                name="image"
+                                type="text"
+                                value={image}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Summary: </label>
+                            <input
+                                name="summary"
+                                type="text"
+                                value={summary}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            />
+                        </div>
+                        <div className="si-form">
+                            <label className="">Story: </label> <br />
+                            <textarea
+                                name="story"
+                                type="text"
+                                cols="60" rows="10"
+                                value={story}
+                                onChange={handleOnChange}
+                                className="story-input"
+                                required
+                            ></textarea>
+                        </div>
+                        <div className="si-form">
+                            <input type="submit" className="form-button" value="Submit Story" />
+                        </div>
+                        
                     </form>
                 </div>
             </>

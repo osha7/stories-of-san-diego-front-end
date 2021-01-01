@@ -157,3 +157,29 @@ h3 {
     color: white;
     font-size: 2rem;
 }
+
+.ui-form {
+    width: 65%;
+    border: 2px solid rgba(206, 79, 39);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+    margin-bottom: 5em;
+    padding: 3em;
+}
+
+.story-form {
+    /* background-color: teal; */
+    width: 60%;
+    border: 2px solid rgba(206, 79, 39);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+    margin-bottom: 5em;
+    padding: 3em;
+}
+
+.si-form {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}

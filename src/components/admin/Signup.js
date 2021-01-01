@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../../css/admin.css";
 
 function Signup(props) {
     const [username, setUsername] = useState('')
@@ -19,12 +20,6 @@ function Signup(props) {
 
     const handleLogin = () => {
         setUser(user)
-    }
-
-    const handleLogout = () => {
-        setUser({
-            user: {}
-        })
     }
 
     const handleSubmit = (e) => {
@@ -69,7 +64,7 @@ function Signup(props) {
     return (
         <div style={formDivStyle}>
             <h1>Sign Up</h1>
-            <form className="ui form" onSubmit={handleSubmit} >
+            <form className="ui-form" onSubmit={handleSubmit} >
                 <div className="field">
                     <label>Username</label>
                     <input value={username} onChange={handleUsernameChange} type="text" placeholder="username" />
