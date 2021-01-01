@@ -28,6 +28,7 @@ function App() {
           <Route exact path='/admin-dashboard' component={AdminDashboard} />
         
       </BrowserRouter>
+      
       <div className="ftrr">
         <Footer />  
       </div>

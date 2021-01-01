@@ -21,6 +21,12 @@ function Signup(props) {
         setUser(user)
     }
 
+    const handleLogout = () => {
+        setUser({
+            user: {}
+        })
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
         fetch(`http://localhost:3000/users`, {
@@ -38,8 +44,16 @@ function Signup(props) {
         .then(res => res.json())
         .then(data => {
             console.log(data, data.jwt)
-            localStorage.setItem("token", data.jwt)
-            props.handleLogin ? props.handleLogin(data.user) : handleLogin(data.user)
+            if (data.jwt) {
+                localStorage.setItem("token", data.jwt)
+                props.handleLogin ? props.handleLogin(data.user) : handleLogin(data.user)
+                alert("Your User Has Been Saved")
+            } else {
+                alert(data.errors.map(error => error ))
+            }
+        })
+        .catch(() => {
+            alert("Unable To Signup At This Time")
         })
         setUsername('')
         setEmail('')
