@@ -146,6 +146,7 @@ export function AdminDashboard(props) {
                                 value={summary}
                                 onChange={handleOnChange}
                                 className="story-input"
+                                maxlength="50"
                                 required
                             />
                         </div>
