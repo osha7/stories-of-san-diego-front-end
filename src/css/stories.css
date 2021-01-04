@@ -100,3 +100,42 @@
 .story-summary h4 {
     padding: 0.5em 1em;
 }
+
+.indiv-story-image__header {
+    /* float: left; */
+    /* margin-left: 4em; */
+    color: rgba(206, 79, 39);
+}
+
+.indiv-story-image {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+.indiv-story-image__image {
+    width: 75%;
+    max-height: 20em;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.indiv-story-image__contributor {
+    color: lightslategrey;
+}
+
+.indiv-story-image__story {
+    font-size: 1.15em;
+    margin-top: 1em;
+    margin-right: 6em;
+    margin-left: 6em;
+    margin-bottom: 2em;
+}
+
+.indiv-story-image__date,
+.indiv-story-image__editor {
+    color: lightslategrey;
+    float: left;
+    margin-left: -3em;
+}
