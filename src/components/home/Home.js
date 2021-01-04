@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../css/home.css";
 import ThreeStories from "./ThreeStories";
 import { Link } from "react-router-dom";

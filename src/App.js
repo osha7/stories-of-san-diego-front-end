@@ -15,6 +15,7 @@ import { Footer } from "./components/footer/footer";
 function App() {
     return (
         <div className="App">
+            {/* <div className="sharethis-inline-share-buttons">HERE</div> */}
             <BrowserRouter>
                 <div className="navbar">
                     <NavBar />
