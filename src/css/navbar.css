@@ -35,8 +35,9 @@
 }
 
 .navbar-header img {
-    padding-top: 1.5em;
-    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
 }
 
 ion-icon {
