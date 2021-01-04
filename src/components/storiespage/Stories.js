@@ -5,7 +5,7 @@ import StoriesDiv from "./StoriesDiv";
 
 export function Stories(props) {
     const [data] = useFetchStoriesData();
-    console.log("stories", data);
+    // console.log("stories", data);
     return (
         <div className="all-stories">
             <div className="stories-headers">

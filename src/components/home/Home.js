@@ -6,7 +6,7 @@ import{ useFetchStoriesData } from '../storiespage/useFetchStoriesData'
 
 export function Home(props) {
     const [data] = useFetchStoriesData()
-    console.log(data)
+    // console.log(data)
 
     return (
         <>

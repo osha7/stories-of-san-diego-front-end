@@ -8,6 +8,7 @@ import { AdminDashboard } from "./components/admin/AdminDashboard";
 import { Contact } from "./components/contact/Contact";
 import { Home } from "./components/home/Home";
 import { Stories } from "./components/storiespage/Stories";
+import Story from "./components/storiespage/Story";
 import Signup from "./components/admin/Signup";
 
 import { Footer } from "./components/footer/footer";
@@ -22,6 +23,7 @@ function App() {
                 </div>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/stories" component={Stories} />
+                <Route exact path="/stories/:id" component={Story} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/contact-us" component={Contact} />
                 <Route exact path="/admin" component={Admin} />

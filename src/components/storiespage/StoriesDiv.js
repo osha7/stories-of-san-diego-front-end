@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function StoriesDiv(props) {
-    console.log(props);
+    // console.log(props);
     
     return (
         <>
@@ -15,9 +16,11 @@ function StoriesDiv(props) {
                                 src={story.image}
                                 alt={story.contributor}
                             />
-                            <a href="#" alt="Read More">
+                            {/* {console.log("stories", story)} */}
+                            <Link to={'/stories/' + story.id} story_id={story.id} >Read More</Link>
+                            {/* <a href="#" alt="Read More">
                                 Read More
-                            </a>
+                            </a> */}
                         </div>
                         <div className="story-summary">
                             <h4>{story.summary}</h4>
