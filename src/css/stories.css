@@ -105,6 +105,7 @@
     /* float: left; */
     /* margin-left: 4em; */
     color: rgba(206, 79, 39);
+    margin-bottom: -1em;
 }
 
 .indiv-story-image {
@@ -123,6 +124,7 @@
 
 .indiv-story-image__contributor {
     color: lightslategrey;
+    font-size: 1.1em;
 }
 
 .indiv-story-image__story {
@@ -130,12 +132,12 @@
     margin-top: 1em;
     margin-right: 6em;
     margin-left: 6em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .indiv-story-image__date,
 .indiv-story-image__editor {
     color: lightslategrey;
     float: left;
-    margin-left: -3em;
+    margin-left: -2em;
 }

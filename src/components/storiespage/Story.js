@@ -25,6 +25,7 @@ function Story(props) {
                 <br />
                 <div className="indiv-story-image__story">
                     <p>{data.story.story}</p>
+                    <br />
                     <span className="indiv-story-image__date">Originally Posted: {moment.parseZone(data.story.date).format('MMMM Do, YYYY')}</span>
                     <br />
                     <span className="indiv-story-image__editor">Edited By: {data.story.transcriber}</span>
