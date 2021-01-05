@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import "../../css/admin.css";
-import ImageUploads from './ImageUploads'
 
 export function AdminDashboard(props) {
     const [userInput, setUserInput] = useReducer(
@@ -72,8 +71,10 @@ export function AdminDashboard(props) {
             contact_phone: "",
             summary: "",
             story: "",
-            image: "",
+            image: null,
         })
+        // debugger
+        document.getElementById('files-upload').value = null
     };
 
     const imageSubmit = (e, id) => {
@@ -158,7 +159,7 @@ export function AdminDashboard(props) {
                                 required
                             />
                         </div>
-                        <input type="file" name="image" onChange={onChange} accept="image/*" />
+                        <input id="files-upload" type="file" name="image" onChange={onChange} accept="image/*" />
                         
                         {/* <div className="si-form">
                             <label className="story-form-label">Image: </label>
