@@ -12,6 +12,7 @@ import Story from "./components/storiespage/Story";
 import Signup from "./components/admin/Signup";
 
 import { Footer } from "./components/footer/footer";
+import Pagination from './components/Pagination'
 
 function App() {
     return (
@@ -34,10 +35,12 @@ function App() {
                     component={AdminDashboard}
                 />
             </BrowserRouter>
+            {/* <Pagination /> */}
 
             <div className="ftrr">
                 <Footer />
             </div>
+
         </div>
     );
 }
