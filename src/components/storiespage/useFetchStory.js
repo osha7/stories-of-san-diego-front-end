@@ -14,7 +14,7 @@ export function useFetchStory(id) {
             setData(fetchData);
         };
         fetchStory();
-    }, []);
+    });
 
     return [data];
 }

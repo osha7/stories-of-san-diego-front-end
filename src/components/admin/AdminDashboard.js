@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import "../../css/admin.css";
+import ImageUploads from './ImageUploads'
 
 export function AdminDashboard(props) {
     const [userInput, setUserInput] = useReducer(
@@ -23,10 +24,18 @@ export function AdminDashboard(props) {
     const image = userInput.image;
 
     const handleOnChange = (e) => {
+        // console.log(e)
         setUserInput({
             [e.target.name]: e.target.value,
         });
     };
+
+    const onChange = (e) => {
+        e.persist()
+        setUserInput({
+                [e.target.name]: e.target.files[0]
+        })
+    }
 
     const handleSubmit = (e) => {
         console.log("Dashboard Submit", userInput)
@@ -46,12 +55,14 @@ export function AdminDashboard(props) {
                 contact_phone,
                 summary,
                 story,
-                image
+                // image
             })
         })
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            const id = data.id
+            imageSubmit(e, id)
         })
         setUserInput({
             date: "",
@@ -64,6 +75,26 @@ export function AdminDashboard(props) {
             image: "",
         })
     };
+
+    const imageSubmit = (e, id) => {
+        // debugger
+        e.preventDefault()
+        console.log("onSubmit here")
+        let body = new FormData()
+        body.append("image", image)
+        body.append("id", id)
+        fetch('http://localhost:3000/image_upload', {
+            method: "PUT",
+            body
+        })
+        .then(res => res.json())
+        .then(json => {
+            console.log("put fetch", json)
+        })
+        .catch(error => {
+            console.log("Avatar upload error:", error)
+        })
+    }
 
     if (localStorage.getItem("token")) {
         return (
@@ -127,7 +158,9 @@ export function AdminDashboard(props) {
                                 required
                             />
                         </div>
-                        <div className="si-form">
+                        <input type="file" name="image" onChange={onChange} accept="image/*" />
+                        
+                        {/* <div className="si-form">
                             <label className="story-form-label">Image: </label>
                             <input
                                 name="image"
@@ -137,7 +170,7 @@ export function AdminDashboard(props) {
                                 className="story-input"
                                 required
                             />
-                        </div>
+                        </div> */}
                         <div className="si-form">
                             <label className="story-form-label">Summary: </label>
                             <input
@@ -146,7 +179,8 @@ export function AdminDashboard(props) {
                                 value={summary}
                                 onChange={handleOnChange}
                                 className="story-input"
-                                maxlength="50"
+                                maxLength="50"
+                                cols="3" rows="20"
                                 required
                             />
                         </div>
@@ -167,6 +201,7 @@ export function AdminDashboard(props) {
                         </div>
                         
                     </form>
+                    {/* <ImageUploads /> */}
                 </div>
             </div>
         );

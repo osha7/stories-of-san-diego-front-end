@@ -20,7 +20,7 @@ export function Admin(props) {
             })
             .then(res => res.json())
             .then(data => {
-                console.log("data", data)
+                // console.log("data", data)
                 setUser(data)
                 // console.log("123", props)
                 // props.history.push("/admin-dashboard")
@@ -59,7 +59,7 @@ export function Admin(props) {
     if (!user.username) {
         return (
             <>
-            {console.log("NO user", user.username)}
+            {/* {console.log("NO user", user.username)} */}
                 <LoginForm handleLogin={handleLogin} handleLogout={handleLogout}/>
                 {/* <button onClick={handleLogout}>Log Out</button> */}
                 {/* <SignupForm handleLogin={handleLogin}/> */}
@@ -69,7 +69,7 @@ export function Admin(props) {
     } else {
         return (
             <>
-            {console.log("have a user", user)}
+            {/* {console.log("have a user", user)} */}
                 {/* <button onClick={handleLogout}>Log Out</button> */}
                 <button className="logout-button" onClick={handleLogout}>Log Out</button>
                 <AdminDashboard user={user}/>
