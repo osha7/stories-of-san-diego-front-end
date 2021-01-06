@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../css/pagination.css";
 
-function Pagination({pages=1, setCurrentPage}) {
+function Pagination({pages=1, setCurrentPage, history}) {
 
     const numberOfPages = []
 
@@ -54,6 +54,7 @@ function Pagination({pages=1, setCurrentPage}) {
     //     return (<div>loading...</div>)
         
     // } else {
+        console.log("pagination history", history)
         return (
             <div>
                 <div className="pagination-container" >
@@ -63,14 +64,26 @@ function Pagination({pages=1, setCurrentPage}) {
                     >Prev</a>
                     {/* ----------all other buttons----------- */}
                     {arrOfCurrButtons.map((page, index) => {
-                        return (
-                            <a
-                                key={index}
-                                onClick = {() => setCurrentButton(page)} 
-                                href="#" 
-                                className={currentButton === page ? 'active' : ''} 
-                            >{page}</a>
-                        )
+                        console.log("return", page, index)
+                        if(page === '...' || page === ' ...' || page === '... ') {
+                            return (<div className="dots">...</div>)
+                            // return (
+                            //     <a
+                            //         key={index}
+                            //         className={currentButton === page ? 'disabled' : ''} 
+                            //     >{page}</a>
+                            // )
+                        } else {
+                        // debugger
+                            return (
+                                <a
+                                    key={index}
+                                    onClick = {() => setCurrentButton(page)} 
+                                    href="#" 
+                                    className={currentButton === page ? 'active' : ''} 
+                                >{page}</a>
+                            )
+                        }
                     })}
                     {/* ----------next----------- */}
                     <a 

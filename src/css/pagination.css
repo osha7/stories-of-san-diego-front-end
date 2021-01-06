@@ -20,6 +20,17 @@
     border: 1px solid #ddd;
     cursor: pointer;
 }
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    border: 1px solid #ddd;
+}
 
 .pagination-container a.active {
     background-color: #007bff;

@@ -4,10 +4,23 @@ import { useFetchStoriesData } from "../storiespage/useFetchStoriesData";
 import StoriesDiv from "./StoriesDiv";
 import Pagination from '../Pagination'
 
+// export function Stories(props) {
+
+//     const [data] = useFetchStoriesData();
+
+//     const [offset, setOffset] = useState(0);
+//     const [perPage] = useState(10);
+//     const [pageCount, setPageCount] = useState(0);
+
+//     return <div></div>;
+
+//     const slice = data.slice(offset, offset + perPage)
+// }
+
 export function Stories(props) {
     const [data] = useFetchStoriesData();
     const [currentPage, setCurrentPage] = useState(1)
-    const [storiesPerPage]  = useState(3)
+    const [storiesPerPage]  = useState(1)
     // console.log("stories", data);
     const stories = data.stories
 
@@ -21,6 +34,7 @@ export function Stories(props) {
     console.log("indexOfFirstStory", indexOfFirstStory)
     console.log("currentStories", currentStories)
     console.log("howManyPages", howManyPages)
+    console.log("story props", props)
 
     return (
         <div className="all-stories">
@@ -30,7 +44,7 @@ export function Stories(props) {
             <div className="first-three-story-cards">
             <StoriesDiv stories={currentStories} />
             </div>
-            <Pagination pages={howManyPages} setCurrentPage={setCurrentPage}/>
+            <Pagination pages={howManyPages} setCurrentPage={setCurrentPage} history={props.history}/>
         </div>
     );
 }
