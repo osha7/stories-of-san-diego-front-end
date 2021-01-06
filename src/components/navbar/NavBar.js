@@ -80,8 +80,14 @@ export const NavBar = () => {
               Admin
             </NavLink>
           </li>
-          <li className="navbar__links">  
-            <ion-icon name="search-outline"></ion-icon>
+          <li className="navbar__links">
+            <NavLink  
+              to="/search"
+              exact
+              style={link}
+              >
+              <ion-icon name="search-outline"></ion-icon>
+            </NavLink>
           </li>
         </ul>
       </div>
