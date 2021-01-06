@@ -20,7 +20,7 @@ import Pagination from '../Pagination'
 export function Stories(props) {
     const [data] = useFetchStoriesData();
     const [currentPage, setCurrentPage] = useState(1)
-    const [storiesPerPage]  = useState(1)
+    const [storiesPerPage]  = useState(12)
     // console.log("stories", data);
     const stories = data.stories
 
