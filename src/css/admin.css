@@ -14,8 +14,8 @@
     color: rgba(0, 115, 181);
 }
 .login-html {
-    width: 73.5%;
-    height: 79.5%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     margin-bottom: 4em;
     padding: 90px 70px 50px 70px;
@@ -76,7 +76,7 @@
 .login-form .group .input,
 .login-form .group .button {
     border: none;
-    padding: 15px 1px;
+    padding: 15px 10px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.3);
 }
