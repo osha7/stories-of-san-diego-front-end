@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useFetchStoriesData } from '../storiespage/useFetchStoriesData';
+import '../../css/search.css'
 
 function Search() {
     
@@ -7,30 +8,17 @@ function Search() {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchTerms, setSearchTerms] = useState([])
     const [searchResults, setSearchResults] = useState([])
-    
-    // const query = searchTerm.split(" ").join('').toLowerCase()
-    // console.log("search data", data.stories)
-    
-    const API_URL = "http://localhost:3000"
-    const searchURL = "/search.json?q=" + searchTerm
 
     const handleOnChange = (e) => {
-        // debugger
         let values = e.target.value
         setSearchTerm(values)
         let valuesSplit = values.split(" ")
-        console.log("valuesSplit", valuesSplit) // ["fun", "and"]
+        console.log("valuesSplit", valuesSplit)
         setSearchTerms(valuesSplit)
     };
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        // const fetchSearchResults = async () => {
-        //     const response = await fetch(API_URL + searchURL)
-        //     const fetchSearchData = await response.json()
-        //     setSearchResults(fetchSearchData.stories)
-        // }
-        // fetchSearchResults()
         const filteredStories = []
         if (searchTerms.length > 0) {
             for (let i = 0; i < searchTerms.length; i++) {
@@ -43,12 +31,6 @@ function Search() {
         }
         
     };
-    // console.log("results", searchResults)
-
-    // const retrievingQuery = (searchTerm) => {
-    //     // debugger
-    //     // let newQueryString = searchTerm.split;
-    // };
 
     const stories = searchResults.map(story => {
         return (

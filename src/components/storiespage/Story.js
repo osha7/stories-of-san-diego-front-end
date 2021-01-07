@@ -10,7 +10,7 @@ function Story(props) {
     if (data.story) {
         return (
             <div>
-                {console.log("individual story", data.story)}
+                {/* {console.log("individual story", data.story)} */}
                 
                 <div className="indiv-story-image">
                     <img src={data.story.image} alt={data.story.contributor} className="indiv-story-image__image" />

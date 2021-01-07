@@ -11,7 +11,7 @@ export function Admin(props) {
 
     useEffect(() => {
         const token = localStorage.getItem("token")
-        console.log("token1", token)
+        // console.log("token1", token)
         if (token) {
             fetch('http://localhost:3000/auto_login', {
                 headers: {
@@ -36,7 +36,7 @@ export function Admin(props) {
 
     const handleLogout = (e) => {
         e.preventDefault()
-        console.log("logout")
+        // console.log("logout")
         localStorage.removeItem("token")
         setUser({})
         // props.history.push("/admin")

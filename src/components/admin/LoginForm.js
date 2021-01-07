@@ -19,7 +19,7 @@ function LoginForm(props) {
     }
 
     const handleSubmit = (e) => {
-        console.log("Handle Submit")
+        // console.log("Handle Submit")
         e.preventDefault()
         fetch('http://localhost:3000/login', {
             method: "POST",

@@ -37,7 +37,7 @@ export function AdminDashboard(props) {
     }
 
     const handleSubmit = (e) => {
-        console.log("Dashboard Submit", userInput)
+        // console.log("Dashboard Submit", userInput)
         e.preventDefault();
         // debugger
         fetch('http://localhost:3000/create', {
@@ -59,7 +59,7 @@ export function AdminDashboard(props) {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             const id = data.id
             imageSubmit(e, id)
         })
@@ -80,7 +80,7 @@ export function AdminDashboard(props) {
     const imageSubmit = (e, id) => {
         // debugger
         e.preventDefault()
-        console.log("onSubmit here")
+        // console.log("onSubmit here")
         let body = new FormData()
         body.append("image", image)
         body.append("id", id)
@@ -90,10 +90,10 @@ export function AdminDashboard(props) {
         })
         .then(res => res.json())
         .then(json => {
-            console.log("put fetch", json)
+            // console.log("put fetch", json)
         })
         .catch(error => {
-            console.log("Avatar upload error:", error)
+            // console.log("Avatar upload error:", error)
         })
     }
 

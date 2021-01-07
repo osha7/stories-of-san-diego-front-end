@@ -24,17 +24,17 @@ export function Stories(props) {
     // console.log("stories", data);
     const stories = data.stories
 
-    console.log(stories.length)
+    // console.log(stories.length)
 
     const indexOfLastStory = currentPage * storiesPerPage
     const indexOfFirstStory = indexOfLastStory - storiesPerPage
     const currentStories = stories.slice(indexOfFirstStory, indexOfLastStory)
     const howManyPages = Math.ceil(stories.length/storiesPerPage)
-    console.log("indexOfLastStory", indexOfLastStory)
-    console.log("indexOfFirstStory", indexOfFirstStory)
-    console.log("currentStories", currentStories)
-    console.log("howManyPages", howManyPages)
-    console.log("story props", props)
+    // console.log("indexOfLastStory", indexOfLastStory)
+    // console.log("indexOfFirstStory", indexOfFirstStory)
+    // console.log("currentStories", currentStories)
+    // console.log("howManyPages", howManyPages)
+    // console.log("story props", props)
 
     return (
         <div className="all-stories">
