@@ -11,6 +11,7 @@ export function Stories(props) {
 
     const stories = data.stories
 
+    const [showSearchBar, setshowSearchBar] = useState(false)
     const [searchTerm, setSearchTerm] = useState("");
     const [searchTerms, setSearchTerms] = useState([])
     const [searchResults, setSearchResults] = useState([])
@@ -52,27 +53,47 @@ export function Stories(props) {
         }
         
     };
+    const handleOnClick = () => {
+        showSearchBar === true ? setshowSearchBar(false) : setshowSearchBar(true)
+    }
 
-    return (
-        <div className="all-stories">
-            <div className="search-articles">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="search_wrap search_wrap_2">
-                            <div class="search_box">
-                                <div class="btn btn_common">
-                                    <i class="fa fa-search"></i>
+    if (showSearchBar === true) {
+        return (
+            <div className="all-stories">
+                <div className="search-button">
+                    <button className="search-button__button" onClick={handleOnClick} >HIDE SEARCH</button>
+                </div>
+                <div className="search-articles">
+                    <div class="wrapper">
+                        <div class="container">
+                            <div class="search_wrap search_wrap_2">
+                                <div class="search_box">
+                                    <div class="btn btn_common">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                    <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={storiesFilterOnChange}/>
                                 </div>
-                                <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={storiesFilterOnChange}/>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="first-three-story-cards">
+                    <StoriesDiv stories={currentStories} />
+                </div>
+                <Pagination pages={howManyPages} setCurrentPage={setCurrentPage} history={props.history}/>
             </div>
-            <div className="first-three-story-cards">
-            <StoriesDiv stories={currentStories} />
+        )
+    } else {
+        return(
+            <div>
+                <div className="search-button">
+                    <button className="search-button__button" onClick={handleOnClick} >SEARCH</button>
+                </div>
+                <div className="first-three-story-cards">
+                    <StoriesDiv stories={currentStories} />
+                </div>
+                <Pagination pages={howManyPages} setCurrentPage={setCurrentPage} history={props.history}/>
             </div>
-            <Pagination pages={howManyPages} setCurrentPage={setCurrentPage} history={props.history}/>
-        </div>
-    );
+        )
+    }
 }

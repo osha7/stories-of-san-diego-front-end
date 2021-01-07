@@ -15,6 +15,7 @@
     grid-auto-rows: 20em;
     grid-column-gap: 4rem;
     grid-row-gap: 4em;
+    margin-right: 2em;
 }
 
 @media screen and (max-width: 900px) {
@@ -140,4 +141,16 @@
     color: lightslategrey;
     float: left;
     margin-left: -2em;
+}
+
+.search-button {
+    margin-top: 1em;
+    margin-bottom: -2em;
+}
+
+.search-button__button {
+    font-size: 1em;
+    color: rgba(139, 125, 119, 0.5);
+    padding: 0.25em 1em;
+    /* border: 0.25px solid rgba(139, 125, 119, 0.5); */
 }
