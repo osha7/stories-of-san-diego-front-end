@@ -32,7 +32,8 @@
     margin-bottom: 0;
     font-size: 1.2em;
     /* background-color: red; */
-    color: rgba(206, 79, 39);
+    color: #5f5652;
+    font-weight: 500;
 }
 
 .home-headers-2 h3 {

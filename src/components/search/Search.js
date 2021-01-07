@@ -43,7 +43,7 @@ function Search() {
     })
     return (
         <div className="search-articles">
-            <div className="search-box">
+            {/* <div className="search-box">
                 <form onSubmit={handleOnSubmit}>
                     <label htmlFor="searchTerm">Search:</label>
                     <input
@@ -58,7 +58,23 @@ function Search() {
                         <i className="fa fa-search" aria-hidden="true"></i>
                     </a>
                 </form>
+            </div> */}
+            <div class="wrapper">
+                <div class="container">
+                    <div class="search_wrap search_wrap_2">
+                        <div class="search_box">
+                            <div class="btn btn_common">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <form onSubmit={handleOnSubmit}>
+                            <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <div className="search-container">
                 <ul>
                     {stories}

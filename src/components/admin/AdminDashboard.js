@@ -159,7 +159,10 @@ export function AdminDashboard(props) {
                                 required
                             />
                         </div>
-                        <input id="files-upload" type="file" name="image" onChange={onChange} accept="image/*" />
+                        <div className="si-form">
+                            <label className="story-form-label">Image: </label>
+                            <input className="files-upload" type="file" name="image" onChange={onChange} accept="image/*" />
+                        </div>
                         
                         {/* <div className="si-form">
                             <label className="story-form-label">Image: </label>

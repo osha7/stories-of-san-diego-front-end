@@ -189,6 +189,7 @@ h3 {
     font-size: 1.2em;
     font-weight: 600;
     color: rgba(206, 79, 39);
+    /* color: #5f5652; */
 }
 
 .stories h1 {
@@ -220,6 +221,11 @@ h3 {
 .story-input:active {
     transform: translateY(-3px);
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+.files-upload {
+    width: 25%;
+    margin-left: 1em;
 }
 
 .logout-button {
