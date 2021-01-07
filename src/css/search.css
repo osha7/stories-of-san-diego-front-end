@@ -1,5 +1,5 @@
-.App {
-    text-align: center;
+.search-articles {
+    margin-top: 3em;
 }
 
 .container .input {
@@ -64,4 +64,102 @@
 
 .search_wrap.search_wrap_2 .search_box .input {
     padding-left: 80px;
+}
+
+/* ------------------------------------- */
+
+.search-story-cards {
+    /* padding: 5em; */
+    margin: 5%;
+    margin-bottom: 7em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 20em;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3em;
+}
+
+@media screen and (max-width: 900px) {
+    .search-story-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 650px) {
+    .search-story-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    .search-story-cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1em;
+    }
+}
+
+.recent-stories {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* height: 50%; */
+    background-color: rgba(206, 79, 39);
+    margin-left: -1em;
+
+    /* margin: 2rem; */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+@media screen and (max-width: 500px) {
+    .recent-stories {
+        width: 60%;
+        height: 80%;
+        margin: 1em;
+        margin-left: 6em;
+        margin-right: 4em;
+        /* padding: 2em; */
+    }
+}
+
+.button-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    /* height: 66%; */
+}
+
+.button-container a {
+    position: absolute;
+    top: 1em;
+    left: -3em;
+    background-color: rgba(206, 79, 39);
+    color: white;
+    text-transform: uppercase;
+    padding: 0.25em 0.75em;
+    margin-left: 1em;
+    border-radius: 0.25em;
+}
+
+.button-container a:hover,
+.button-container a:active {
+    transform: translateY(-3px);
+    box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.story-summary {
+    background-color: rgba(206, 79, 39);
+    color: white;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.story-summary h4 {
+    padding: 0.5em 1em;
 }
