@@ -12,7 +12,7 @@ function Pagination({pages=1, setCurrentPage}) {
     const [currentButton, setCurrentButton] = useState(1)
     const [arrOfCurrButtons, setArrOfCurrButtons] = useState([])
 
-    useEffect(() => {
+    const currentButtonSet = (() => {
         let tempNumberOfPages = [...arrOfCurrButtons]
 
         let dotsInitial = '...'
@@ -45,17 +45,20 @@ function Pagination({pages=1, setCurrentPage}) {
 
         setCurrentPage(currentButton)
         setArrOfCurrButtons(tempNumberOfPages)
-        
-    }, [currentButton])
+    }) 
+
+    useEffect(() => {
+        currentButtonSet()
+    }, [currentButton]) // eslint-disable-line react-hooks/exhaustive-deps
 
     // if (arrOfCurrButtons.length > 0) {
         return (
             <div>
                 <div className="pagination-container" >
                     {/* ----------prev----------- */}
-                    <a href="#" className={`${currentButton === 1 ? 'disabled' : ''}`}
+                    <button className={`${currentButton === 1 ? 'disabled' : ''}`}
                         onClick = {() => setCurrentButton((prev) => prev === 1 ? prev : prev - 1)}
-                    >Prev</a>
+                    >Prev</button>
                     {/* ----------all other buttons----------- */}
                     { console.log("arrOfCurrButtons", arrOfCurrButtons)}
                     {arrOfCurrButtons.map((page, index) => {
@@ -63,21 +66,19 @@ function Pagination({pages=1, setCurrentPage}) {
                             return (<div className="dots">...</div>)
                         } else {
                             return (
-                                <a
+                                <button
                                     key={index}
                                     onClick = {() => setCurrentButton(page)} 
-                                    href="#" 
                                     className={currentButton === page ? 'active' : ''} 
-                                >{page}</a>
+                                >{page}</button>
                             )
                         }
                     })}
                     {/* ----------next----------- */}
-                    <a 
-                        href="#" 
+                    <button 
                         className={`${currentButton === numberOfPages.length ? 'disabled' : ''}`}
                         onClick = {() => setCurrentButton((prev) => prev === numberOfPages.length ? prev : prev + 1)}
-                    >Next</a>
+                    >Next</button>
                 </div>
             </div>
         )
