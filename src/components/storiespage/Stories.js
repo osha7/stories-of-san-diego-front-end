@@ -57,21 +57,21 @@ export function Stories(props) {
         showSearchBar === true ? setshowSearchBar(false) : setshowSearchBar(true)
     }
 
-    if (showSearchBar === true) {
+    if (showSearchBar === false) {
         return (
             <div className="all-stories">
-                <div className="search-button">
+                {/* <div className="search-button">
                     <button className="search-button__button" onClick={handleOnClick} >HIDE SEARCH</button>
-                </div>
-                <div className="search-articles">
-                    <div class="wrapper">
-                        <div class="container">
-                            <div class="search_wrap search_wrap_2">
-                                <div class="search_box">
-                                    <div class="btn btn_common">
-                                        <i class="fa fa-search"></i>
+                </div> */}
+                <div className="search-articles__stories">
+                    <div className="wrapper__stories">
+                        <div className="container__stories">
+                            <div className="search_wrap__stories search_wrap_2__stories">
+                                <div className="search_box__stories">
+                                    <div className="btn btn_common__stories">
+                                        <i className="fa fa-search"></i>
                                     </div>
-                                    <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={storiesFilterOnChange}/>
+                                    <input type="text" className="input" value={searchTerm} placeholder="Search For Stories..." onChange={storiesFilterOnChange}/>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +86,9 @@ export function Stories(props) {
     } else {
         return(
             <div>
-                <div className="search-button">
+                {/* <div className="search-button">
                     <button className="search-button__button" onClick={handleOnClick} >SEARCH</button>
-                </div>
+                </div> */}
                 <div className="first-three-story-cards">
                     <StoriesDiv stories={currentStories} />
                 </div>

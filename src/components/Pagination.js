@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../css/pagination.css";
 
-function Pagination({pages=1, setCurrentPage, history}) {
+function Pagination({pages=1, setCurrentPage}) {
 
     const numberOfPages = []
 
@@ -43,18 +43,12 @@ function Pagination({pages=1, setCurrentPage, history}) {
             setCurrentButton(arrOfCurrButtons[arrOfCurrButtons.length - 3] + 1)
         }
 
-        setArrOfCurrButtons(tempNumberOfPages)
         setCurrentPage(currentButton)
+        setArrOfCurrButtons(tempNumberOfPages)
+        
     }, [currentButton])
 
-    console.log("arrOfCurrButtons", arrOfCurrButtons)
-    console.log("arrOfCurrButtons", arrOfCurrButtons.length)
-
-    // if (arrOfCurrButtons.length === 0) {
-    //     return (<div>loading...</div>)
-        
-    // } else {
-        console.log("pagination history", history)
+    // if (arrOfCurrButtons.length > 0) {
         return (
             <div>
                 <div className="pagination-container" >
@@ -63,18 +57,11 @@ function Pagination({pages=1, setCurrentPage, history}) {
                         onClick = {() => setCurrentButton((prev) => prev === 1 ? prev : prev - 1)}
                     >Prev</a>
                     {/* ----------all other buttons----------- */}
+                    { console.log("arrOfCurrButtons", arrOfCurrButtons)}
                     {arrOfCurrButtons.map((page, index) => {
-                        console.log("return", page, index)
                         if(page === '...' || page === ' ...' || page === '... ') {
                             return (<div className="dots">...</div>)
-                            // return (
-                            //     <a
-                            //         key={index}
-                            //         className={currentButton === page ? 'disabled' : ''} 
-                            //     >{page}</a>
-                            // )
                         } else {
-                        // debugger
                             return (
                                 <a
                                     key={index}
@@ -95,6 +82,9 @@ function Pagination({pages=1, setCurrentPage, history}) {
             </div>
         )
         
+    // } else {
+    //     
+        // return('...loading')
     // }
 }
 
