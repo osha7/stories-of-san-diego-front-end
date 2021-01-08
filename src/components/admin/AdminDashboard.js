@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import "../../css/admin.css";
+import { API_URL } from '../../constants'
 
 export function AdminDashboard(props) {
     const [userInput, setUserInput] = useReducer(
@@ -40,7 +41,7 @@ export function AdminDashboard(props) {
         // console.log("Dashboard Submit", userInput)
         e.preventDefault();
         // debugger
-        fetch('http://localhost:3000/create', {
+        fetch(API_URL + '/create', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -84,7 +85,7 @@ export function AdminDashboard(props) {
         let body = new FormData()
         body.append("image", image)
         body.append("id", id)
-        fetch('http://localhost:3000/image_upload', {
+        fetch(API_URL + '/image_upload', {
             method: "PUT",
             body
         })

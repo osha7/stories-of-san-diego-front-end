@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../../css/admin.css";
+import { API_URL } from '../../constants'
 
 function Signup(props) {
     const [username, setUsername] = useState('')
@@ -24,7 +25,7 @@ function Signup(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:3000/users`, {
+        fetch(API_URL + `/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

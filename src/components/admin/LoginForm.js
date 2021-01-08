@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { API_URL } from '../../constants'
 
 function LoginForm(props) {
 
@@ -21,7 +22,7 @@ function LoginForm(props) {
     const handleSubmit = (e) => {
         // console.log("Handle Submit")
         e.preventDefault()
-        fetch('http://localhost:3000/login', {
+        fetch(API_URL + '/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

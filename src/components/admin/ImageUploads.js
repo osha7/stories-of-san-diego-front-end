@@ -1,5 +1,6 @@
 import React from "react";
 // import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
+import { API_URL } from '../../constants'
 
 class ImageUploads extends React.Component {
 
@@ -22,7 +23,7 @@ class ImageUploads extends React.Component {
         let body = new FormData()
         body.append("image", this.state.image)
         body.append("id", this.props.id)
-        fetch('http://localhost:3000/image_upload', {
+        fetch(API_URL + '/image_upload', {
             method: "PUT",
             body
         })

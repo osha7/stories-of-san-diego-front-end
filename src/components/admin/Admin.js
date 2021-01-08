@@ -3,6 +3,7 @@ import LoginForm from './LoginForm'
 // import SignupForm from './Signup'
 import React, { useState, useEffect } from 'react'
 import { AdminDashboard } from './AdminDashboard';
+import { API_URL } from '../../constants'
 
 export function Admin(props) {
 
@@ -13,7 +14,7 @@ export function Admin(props) {
         const token = localStorage.getItem("token")
         // console.log("token1", token)
         if (token) {
-            fetch('http://localhost:3000/auto_login', {
+            fetch(API_URL + '/auto_login', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -46,7 +47,7 @@ export function Admin(props) {
     //     console.log('Here')
     //     // debugger
     //     const token = localStorage.getItem("token")
-    //     fetch('http://localhost:3000/user_is_authorized', {
+    //     fetch(API_URL + '/user_is_authorized', {
     //         headers: {
     //             Authorization: `Bearer ${token}`
     //         }
