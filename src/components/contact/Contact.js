@@ -5,6 +5,7 @@ export function Contact(props) {
 
     return (
         <>
+       CONTACT PAGE
             
         </>
     )

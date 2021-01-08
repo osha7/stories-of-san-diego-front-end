@@ -40,7 +40,7 @@ export const Footer = () => {
                 </p>
             </section>
             <aside className="contributing-writer">
-                <a href="/contact-us" alt="Read More">
+                <a href="/contributing-writer" alt="Read More">
                     <h2>Become a Contributing Writer</h2>
                 </a>
             </aside>
