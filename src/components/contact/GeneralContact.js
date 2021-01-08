@@ -6,7 +6,7 @@ function GeneralContact(props) {
         <div className="story-submission-div">
             <div className="story-submission">
                 <h4 className="header1">GENERAL CONTACT</h4>
-                <span>Send us an message directly.  We can't wait to hear from you.</span>
+                <span>Send us a message directly.  We can't wait to hear from you.</span>
             </div>
             <div>
                 <button className="story-submission-btn">

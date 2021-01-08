@@ -9,10 +9,12 @@ export function Contact(props) {
 
     return (
         <div className="contact-page">
-            <h1>CONTACT US</h1>
-            <StorySubmission />
-            <GeneralContact />
-            <MailChimpSignup />
+            <div className="contact-page-opaque"> 
+                <h1>CONTACT US</h1>
+                <StorySubmission />
+                <GeneralContact />
+                <MailChimpSignup />
+            </div>
         </div>
     )
 }

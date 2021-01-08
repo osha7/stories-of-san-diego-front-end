@@ -9,6 +9,8 @@
 .contact-page {
     width: 45%;
     background-color: whitesmoke;
+    /* background: url(https://i.imgur.com/DmXejTs.jpg) no-repeat center; */
+    /* background-size: 230%; */
     margin: 0 auto;
     margin-top: 3em;
     margin-bottom: 4em;
@@ -19,9 +21,21 @@
         0 17px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
+/* .contact-page-opaque {
+    background-color: rgba(245, 245, 245, 0.8);
+    width: 111%;
+    height: 130%;
+    margin-left: -2em;
+} */
+
+.contact-page h1 {
+    color: rgba(206, 79, 39);
+}
+
 .story-submission-div {
     padding: 2em;
     display: flex;
+    color: #5f5652;
 }
 
 .story-submission-div:hover,
@@ -34,24 +48,27 @@
     all: unset;
     display: flex;
     flex-wrap: wrap;
-
-    /* align-content: initial; */
-    /* justify-content: start; */
 }
 
 .story-submission-btn {
     padding: 1em;
     margin-right: -2em;
-    /* margin: 1em; */
-    /* height: 4em; */
     font-size: 2em;
     border: none;
     background-color: Transparent;
     cursor: pointer;
 }
 
+.story-submission-btn:hover,
+.story-submission-btn:active {
+    transform: translateY(-3px);
+}
+/* 
+ion-icon:hover {
+    box-shadow: 0 2px 2px rgba(0, 115, 181, 0.26);
+} */
+
 .story-submission span {
-    /* white-space: pre; */
     text-align: left;
     margin-right: 1em;
 }
