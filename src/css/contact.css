@@ -72,3 +72,11 @@ ion-icon:hover {
     text-align: left;
     margin-right: 1em;
 }
+
+.story-form-submission {
+    margin-bottom: 2em;
+}
+
+.story-form-field {
+    margin: 2em;
+}

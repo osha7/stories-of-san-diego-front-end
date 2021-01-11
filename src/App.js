@@ -13,6 +13,7 @@ import Signup from "./components/admin/Signup";
 import Search from "./components/search/Search"
 import { Footer } from "./components/footer/footer";
 import { ContributingWriter } from './components/contact/ContributingWriter';
+import StoryForm from './components/contact/StoryForm';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                 <Route exact path="/admin-dashboard" component={AdminDashboard} />
                 <Route exact path="/search" component={Search} />
                 <Route exact path="/contributing-writer" component={ContributingWriter} />
+                <Route exact path="/story-form" component={StoryForm} />
             </BrowserRouter>
 
             <div className="ftrr">
