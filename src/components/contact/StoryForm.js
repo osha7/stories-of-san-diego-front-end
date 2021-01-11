@@ -64,30 +64,31 @@ function StoryForm() {
 
     return (
         <div className="story-form-submission">
+            <h2>Submit Your Story / Envía Tu Historia</h2>
             <form onSubmit={onSubmit} >
                 <div className="story-form-field">
-                    <label for="fromName" >NAME / NOMBRE:</label>
+                    <label for="fromName" >NAME / NOMBRE: </label>
                     <input id="fromName" type="text" name="fromName" className="" />
                 </div>
 
                 <div className="story-form-field">
-                    <label for="replyTo" >EMAIL / CORREO DE ELECTRONICA:</label>
+                    <label for="replyTo" >EMAIL / CORREO DE ELECTRONICA: </label>
                     <input id="replyTo" type="email" name="replyTo" className="" />
                 </div>
 
                 <div className="story-form-field">
-                    <label for="phoneNumber">PHONE / TELEPHONO:</label>
+                    <label for="phoneNumber">PHONE / TELEPHONO: </label>
                     <input id="phoneNumber" type="text" name="phoneNumber" className="" />
                 </div>
 
                 <div className="story-form-field">
-                    <label for="image">LINK TO IMAGE. (WE  CAN'T ACCEPT FILES AT THIS TIME) / ENLACE A LA IMAGEN. (NO PODEMOS ACEPTAR ARCHIVOS EN ESTE MOMENTO):</label>
+                    <label for="image">LINK TO IMAGE. (WE  CAN'T ACCEPT FILES AT THIS TIME) / ENLACE A LA IMAGEN. (NO PODEMOS ACEPTAR ARCHIVOS EN ESTE MOMENTO): </label>
                     <input id="image" type="text" name="image" className="" /> <br />
                     <span>Good sites to host images: <a href="https://cloudinary.com/">Cloudinary</a> or <a href="https://imgur.com/">Imgur</a></span>
                 </div>
 
                 <div className="story-form-field">
-                    <label for="submissionName" >WHAT NAME WOULD YOU LIKE US TO USE ON YOUR SUBMISSION? / CUAL ES EL NOMBRE USAR EN EL SUBMISSION?</label>
+                    <label for="submissionName" >WHAT NAME WOULD YOU LIKE US TO USE ON YOUR SUBMISSION? / CUAL ES EL NOMBRE USAR EN EL SUBMISSION? </label>
                     <input id="submissionName" type="text" name="submissionName" className="" />
                 </div>
 
@@ -97,7 +98,7 @@ function StoryForm() {
                 </div>
 
                 <div>
-                    <button type='submit'>SEND</button>
+                    <button type='submit'>SUBMIT / ENVIAR</button>
                 </div>
             </form>
             
