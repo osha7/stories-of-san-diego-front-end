@@ -7,11 +7,11 @@ import TriggerButton from "../components/TriggerButton";
 export const ContactModal = (props) => {
     const [isShown, setIsShown] = useState(false)
 
-    const showModal = () => {
-        setIsShown(true)
-        // closeButton.focus()
-        toggleScrollLock();
-    };
+    // const showModal = () => {
+    //     setIsShown(true)
+    //     // closeButton.focus()
+    //     toggleScrollLock();
+    // };
 
     const closeModal = () => {
         setIsShown(false)

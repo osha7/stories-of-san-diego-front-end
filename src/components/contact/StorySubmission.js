@@ -3,12 +3,12 @@
 import React from 'react';
 import '../../css/contact.css';
 // import { Link } from "react-router-dom";
-import ContactModal from '../../containers/ContactModal'
+// import ContactModal from '../../containers/ContactModal'
 
 
 function StorySubmission(props) {
 
-    const triggerText = ">"
+    // const triggerText = ">"
     return (
         <div className="story-submission-div">
             <div className="story-submission">
