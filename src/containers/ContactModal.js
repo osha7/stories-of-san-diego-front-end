@@ -9,7 +9,7 @@ export const ContactModal = (props) => {
 
     const showModal = () => {
         setIsShown(true)
-        closeButton.focus()
+        // closeButton.focus()
         toggleScrollLock();
     };
 
@@ -26,8 +26,8 @@ export const ContactModal = (props) => {
     };
 
     const onClickOutside = (event) => {
-        if (modal && modal.contains(event.target)) return;
-            closeModal();
+        // if (modal && modal.contains(event.target)) return;
+        //     closeModal();
     };
 
     const toggleScrollLock = () => {
@@ -36,11 +36,11 @@ export const ContactModal = (props) => {
 
         return (
             <>
-                <TriggerButton showModal={showModal} buttonRef={(n) => (TriggerButton = n)} triggerText={props.triggerText} />
+                {/* <TriggerButton showModal={showModal} buttonRef={(n) => (TriggerButton = n)} triggerText={props.triggerText} /> */}
                 {isShown ? (
                     <Modal
-                        modalRef={(n) => (modal = n)}
-                        buttonRef={(n) => (closeButton = n)}
+                        // modalRef={(n) => (modal = n)}
+                        // buttonRef={(n) => (closeButton = n)}
                         closeModal={closeModal}
                         onKeyDown={onKeyDown}
                         onClickOutside={onClickOutside}

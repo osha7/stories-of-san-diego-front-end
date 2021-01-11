@@ -20,10 +20,11 @@ export function Home(props) {
                     Latinx, Asians and other people of color (POC) have been
                     disproportionately affected by the disease. They are the
                     frontline workers who work every day for non-livable wages,
-                    little or no sick pay and minimal access to healthcare. In
+                    little or no sick pay and minimal access to healthcare. 
+                </h3> <br />
+                <h3>In
                     San Diego, the zip codes hardest hit by COVID-19 are black
-                    and brown neighborhoods. 
-                </h3>
+                    and brown neighborhoods. </h3> <br />
                 <h3 className="second-h3">
                 Systemic racism has left POC behind
                     to work blue collar jobs to feed, clothe and serve a
