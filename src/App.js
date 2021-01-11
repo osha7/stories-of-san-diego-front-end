@@ -10,6 +10,7 @@ import { Home } from "./components/home/Home";
 import { Stories } from "./components/storiespage/Stories";
 import Story from "./components/storiespage/Story";
 import Signup from "./components/admin/Signup";
+import News from "./components/news/News"
 import Search from "./components/search/Search"
 import { Footer } from "./components/footer/footer";
 import { ContributingWriter } from './components/contact/ContributingWriter';
@@ -28,6 +29,7 @@ function App() {
                 <Route exact path="/stories/:id" component={Story} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/contact-us" component={Contact} />
+                <Route exact path="/news" component={News} />
                 <Route exact path="/admin" component={Admin} />
                 <Route exact path="/signup-private" component={Signup} />
                 <Route exact path="/admin-dashboard" component={AdminDashboard} />

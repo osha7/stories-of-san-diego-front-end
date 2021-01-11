@@ -98,3 +98,13 @@
     text-decoration: none;
     color: #fff;
 }
+
+.admin-login {
+}
+
+.admin-login:hover,
+.admin-login:active {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.5em;
+    border-radius: 0.25em;
+}

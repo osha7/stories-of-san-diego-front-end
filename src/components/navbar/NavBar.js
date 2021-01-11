@@ -70,14 +70,14 @@ export const NavBar = () => {
           </li>
           <li className="navbar__links">
             <NavLink
-              to="/admin"
+              to="/news"
               exact
               style={link}
               activeStyle={{
                 color: "rgba(206, 79, 39)",
               }}
             >
-              Admin
+              News
             </NavLink>
           </li>
           <li className="navbar__links">

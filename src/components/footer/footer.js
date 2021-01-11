@@ -43,6 +43,9 @@ export const Footer = () => {
                 <a href="/contributing-writer" alt="Read More">
                     <h2>Become a Contributing Writer</h2>
                 </a>
+                <a href="/admin" alt="admin-login" className="admin-login">
+                    Admin Log-In
+                </a>
             </aside>
         </main>
     );
