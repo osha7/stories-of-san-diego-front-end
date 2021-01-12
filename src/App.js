@@ -16,6 +16,7 @@ import { Footer } from "./components/footer/footer";
 import { ContributingWriter } from './components/contact/ContributingWriter';
 import StoryForm from './components/contact/StoryForm';
 import MailchimpForm from './components/contact/MailchimpForm'
+import ContactForm from './components/contact/ContactForm'
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                 <Route exact path="/contributing-writer" component={ContributingWriter} />
                 <Route exact path="/story-form" component={StoryForm} />
                 <Route exact path="/mailchimp-form" component={MailchimpForm} />
+                <Route exact path="/contact-form" component={ContactForm} />
             </BrowserRouter>
 
             <div className="ftrr">
