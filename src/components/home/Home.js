@@ -6,7 +6,6 @@ import { useFetchStoriesData } from "../storiespage/useFetchStoriesData";
 
 export function Home(props) {
     const [data] = useFetchStoriesData();
-    // console.log(data)
 
     return (
         <>
@@ -43,10 +42,10 @@ export function Home(props) {
                     <ThreeStories stories={data.stories} />
                 </div>
             )}
-            {data.stories.length < 1 && (
+            {data.stories.length === 0 && (
                 <div className="loading">
                     <h1>Loading</h1>
-                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
             )}
             <div className="home-headers-2">
