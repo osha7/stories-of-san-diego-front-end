@@ -63,16 +63,16 @@ function Search() {
 
     if (stories.length === 0) {
         return (
-            <div className="search-articles">
-                <div class="wrapper" style={{"height" : "400px"}}>
-                    <div class="container">
-                        <div class="search_wrap search_wrap_2">
-                            <div class="search_box">
-                                <div class="btn btn_common">
-                                    <i class="fa fa-search"></i>
+            <div className="search-articles1">
+                <div className="wrapper" style={{"height" : "400px"}}>
+                    <div className="container">
+                        <div className="search_wrap search_wrap_2">
+                            <div className="search_box">
+                                <div className="btn btn_common">
+                                    <i className="fa fa-search"></i>
                                 </div>
                                 <form onSubmit={handleOnSubmit}>
-                                <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
+                                <input type="search" className="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
                                 </form>
                             </div>
                         </div>
@@ -82,16 +82,16 @@ function Search() {
         )
     } else {
         return (
-            <div className="search-articles">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="search_wrap search_wrap_2">
-                            <div class="search_box">
-                                <div class="btn btn_common">
-                                    <i class="fa fa-search"></i>
+            <div classNameName="search-articles">
+                <div className="wrapper">
+                    <div className="container">
+                        <div className="search_wrap search_wrap_2">
+                            <div className="search_box">
+                                <div className="btn btn_common">
+                                    <i className="fa fa-search"></i>
                                 </div>
                                 <form onSubmit={handleOnSubmit}>
-                                <input type="search" class="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
+                                <input type="search" className="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
                                 </form>
                             </div>
                         </div>
