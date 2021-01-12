@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 function Search() {
     
     const [data] = useFetchStoriesData()
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("")
     const [searchTerms, setSearchTerms] = useState([])
     const [searchResults, setSearchResults] = useState([])
+    const [sorryMessage, setSorryMessage] = useState("")
 
     const handleOnChange = (e) => {
         let values = e.target.value
@@ -30,6 +31,9 @@ function Search() {
                 ))
             }
             setSearchResults(filteredStories)
+            if (filteredStories.length === 0) {
+                setSorryMessage('Sorry. There are no stories fitting that description.')
+            }
         }
         
     };
@@ -75,6 +79,9 @@ function Search() {
                                 <input type="search" className="input" value={searchTerm} placeholder="Search For Stories..." onChange={handleOnChange}/>
                                 </form>
                             </div>
+                            {sorryMessage && (
+                                <div>{sorryMessage}</div>
+                            )}
                         </div>
                     </div>
                 </div>
