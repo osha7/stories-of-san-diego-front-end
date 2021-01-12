@@ -43,6 +43,12 @@ export function Home(props) {
                     <ThreeStories stories={data.stories} />
                 </div>
             )}
+            {data.stories.length < 1 && (
+                <div className="loading">
+                    <h1>Loading</h1>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+            )}
             <div className="home-headers-2">
                 <Link to="/contact-us">
                     <h3>Share YOUR Story with us</h3>

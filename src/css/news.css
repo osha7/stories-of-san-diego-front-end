@@ -66,6 +66,7 @@
 .under-construction p:active {
     /* transform: translateY(-3px); */
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;
     transform: skewX(-12deg) translateY(-3px);
 }
 

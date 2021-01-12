@@ -87,9 +87,17 @@ export function Stories(props) {
                     </div>
                 </div>
             </div>
-            <div className="first-three-story-cards">
-                <StoriesDiv stories={currentStories} />
-            </div>
+            {stories && (
+                <div className="first-three-story-cards">
+                    <StoriesDiv stories={currentStories} />
+                </div>
+            )}
+            { stories.length < 1 && (
+                <div className="loading">
+                    <h1>Loading</h1>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+            )}
             <Pagination
                 pages={howManyPages}
                 setCurrentPage={setCurrentPage}
