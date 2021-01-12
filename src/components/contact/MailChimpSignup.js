@@ -1,6 +1,5 @@
 import React from "react";
 import "../../css/contact.css";
-import MailchimpForm from "./MailchimpForm"
 import { Link } from "react-router-dom";
 
 function MailChimpSignup() {
