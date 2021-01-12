@@ -122,8 +122,15 @@ ion-icon:hover {
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 
+.mail-chimp-form {
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 .chimp-forms {
-    margin-left: 38%;
+    margin: 0 auto;
 }
 
 .chimp-forms input {
@@ -133,7 +140,7 @@ ion-icon:hover {
 }
 
 .chimp-forms button {
-    margin-left: -60%;
+    /* margin-left: -60%; */
     background-color: rgba(206, 79, 39);
     color: white;
     text-transform: uppercase;
