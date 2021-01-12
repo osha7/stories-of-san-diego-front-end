@@ -77,7 +77,7 @@ export const NavBar = () => {
                 color: "rgba(206, 79, 39)",
               }}
             >
-              News
+              &nbsp;&nbsp;News
             </NavLink>
           </li>
           <li className="navbar__links">

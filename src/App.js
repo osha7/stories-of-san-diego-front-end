@@ -15,6 +15,7 @@ import Search from "./components/search/Search"
 import { Footer } from "./components/footer/footer";
 import { ContributingWriter } from './components/contact/ContributingWriter';
 import StoryForm from './components/contact/StoryForm';
+import MailchimpForm from './components/contact/MailchimpForm'
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                 <Route exact path="/search" component={Search} />
                 <Route exact path="/contributing-writer" component={ContributingWriter} />
                 <Route exact path="/story-form" component={StoryForm} />
+                <Route exact path="/mailchimp-form" component={MailchimpForm} />
             </BrowserRouter>
 
             <div className="ftrr">

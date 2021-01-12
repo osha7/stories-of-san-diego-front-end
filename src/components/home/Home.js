@@ -20,10 +20,23 @@ export function Home(props) {
                     disproportionately affected by the disease. They are the
                     frontline workers who work every day for non-livable wages,
                     little or no sick pay and minimal access to healthcare. 
-                </h3> <br />
+                </h3> 
+                <br />
                 <h3>In
                     San Diego, the zip codes hardest hit by COVID-19 are black
-                    and brown neighborhoods. </h3> <br />
+                    and brown neighborhoods. </h3>
+                {data.stories.length > 0 && (
+                    <div className="latest-story-card-divs">
+                        {/* {console.log("mapping", data.stories.length === 0)} */}
+                        <ThreeStories stories={data.stories} />
+                    </div>
+                )}
+                {data.stories.length === 0 && (
+                    <div className="loading">
+                        <h1>Loading</h1>
+                        <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </div>
+                )}
                 <h3 className="second-h3">
                 Systemic racism has left POC behind
                     to work blue collar jobs to feed, clothe and serve a
@@ -36,18 +49,7 @@ export function Home(props) {
                     time as it unfolds.
                 </h3>
             </div>
-            {data.stories.length > 0 && (
-                <div className="latest-story-card-divs">
-                    {/* {console.log("mapping", data.stories.length === 0)} */}
-                    <ThreeStories stories={data.stories} />
-                </div>
-            )}
-            {data.stories.length === 0 && (
-                <div className="loading">
-                    <h1>Loading</h1>
-                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                </div>
-            )}
+            
             <div className="home-headers-2">
                 <Link to="/contact-us">
                     <h3>Share YOUR Story with us</h3>

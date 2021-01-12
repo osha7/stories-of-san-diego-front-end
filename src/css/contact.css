@@ -80,7 +80,8 @@ ion-icon:hover {
     margin-top: 1.5em;
 }
 
-.story-form-submission {
+.story-form-submission,
+.mail-chimp-form {
     width: 65%;
     background-color: whitesmoke;
     margin: 0 auto;
@@ -92,7 +93,8 @@ ion-icon:hover {
     padding: 1em 2em 2em 2em;
     color: #5f5652;
 }
-.story-form-submission h2 {
+.story-form-submission h2,
+.mail-chimp-form h2 {
     color: rgba(206, 79, 39);
 }
 
@@ -118,4 +120,23 @@ ion-icon:hover {
     transform: translateY(-3px);
     transition: all 0.2s ease;
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+.chimp-forms {
+    margin-left: 38%;
+}
+
+.chimp-forms input {
+    margin: 1em;
+    display: flex;
+    color: #5f5652;
+}
+
+.chimp-forms button {
+    margin-left: -60%;
+    background-color: rgba(206, 79, 39);
+    color: white;
+    text-transform: uppercase;
+    padding: 0.25em 0.75em;
+    border-radius: 0.25em;
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import "../../css/contact.css";
+import MailchimpForm from "./MailchimpForm"
+import { Link } from "react-router-dom";
 
 function MailChimpSignup() {
     return (
@@ -11,10 +13,11 @@ function MailChimpSignup() {
                     We promise, we won't flood your inbox!
                 </span>
             </div>
-            <div>
-                <button className="story-submission-btn">
+            <div className="story-form-container">
+                <Link to="/mailchimp-form">
                     <ion-icon name="chevron-forward-outline"></ion-icon>
-                </button>
+                </Link>
+                {/* < ContactModal triggerText={triggerText}/> */}
             </div>
         </div>
     );

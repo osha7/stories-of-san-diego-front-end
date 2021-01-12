@@ -12,8 +12,8 @@
 }
 
 .loading h1 {
-    font-size: 2em;
-    color: #5f5652;
+    font-size: 2em !important;
+    color: #5f5652 !important;
 }
 
 .lds-ellipsis {
