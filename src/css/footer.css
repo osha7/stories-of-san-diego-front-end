@@ -45,14 +45,51 @@
     border-radius: 0.25em;
 }
 
+.second-row-footer {
+    display: grid;
+}
+
 .copyright {
     font-size: 1rem;
     color: lightgray;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 2em;
     text-align: center;
     width: 70%;
+}
+
+.social-media-logo {
+    width: 4%;
+    margin: 0.5em;
+    float: left;
+}
+
+.social-logos {
+    margin-top: 1em;
+    margin-left: 5.5em;
+    margin-bottom: -2.5em;
+}
+
+@media screen and (max-width: 630px) {
+    .social-media-logo {
+        width: 10%;
+        margin: 0.5em;
+        float: right;
+    }
+    .social-logos {
+        margin-top: -4em;
+        margin-right: 3.5em;
+        /* margin-left: 5.5em; */
+    }
+}
+
+.social-media-logo:hover,
+.social-media-logo:active {
+    transform: translateY(-3px);
+    transition: all 0.5s ease;
+    box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 
 .contributing-writer {

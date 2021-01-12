@@ -1,4 +1,6 @@
 import "../../css/footer.css";
+import InstagramLogo from '../../css/iconmonstr-instagram-1.svg'
+import TwitterLogo from '../../css/iconmonstr-twitter-3.svg'
 
 export const Footer = () => {
     return (
@@ -35,9 +37,16 @@ export const Footer = () => {
                         </a>
                     </li>
                 </ul>
-                <p className="copyright">
-                    © Copyright 2020 Stories of San Diego
-                </p>
+                <div className="second-row-footer" >
+                <div className="social-logos">
+                        <a href="https://www.instagram.com/storiesofsd/" target="_blank" rel="noreferrer" ><img src={InstagramLogo} alt="insta-logo" className="social-media-logo"></img></a>
+                        <a href="https://twitter.com/StoriesofSD" target="_blank" rel="noreferrer" ><img src={TwitterLogo} alt="insta-logo" className="social-media-logo"></img></a>
+                    </div>
+                    <p className="copyright">
+                        © Copyright 2020 Stories of San Diego
+                    </p>
+                    
+                </div>
             </section>
             <aside className="contributing-writer">
                 <a href="/contributing-writer" alt="Read More">

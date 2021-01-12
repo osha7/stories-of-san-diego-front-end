@@ -7,7 +7,7 @@
     width: 35%;
     height: 20rem;
     background: rgba(206, 79, 39);
-    border: 0.5em solid orange;
+    border: 1px solid #5f56521a;
     border-radius: 0.5em;
     box-shadow: 0 17px 20px 0 rgba(0, 0, 0, 0.12),
         0 20px 50px 0 rgba(0, 0, 0, 0.05);
