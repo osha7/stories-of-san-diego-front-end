@@ -41,6 +41,7 @@
 .story-submission-div:hover,
 .story-submission-div:active {
     transform: translateY(-3px);
+    transition: all 0.5s ease;
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 
@@ -62,6 +63,7 @@
 .story-submission-btn:hover,
 .story-submission-btn:active {
     transform: translateY(-3px);
+    transition: all 0.5s ease;
 }
 /* 
 ion-icon:hover {
@@ -118,7 +120,7 @@ ion-icon:hover {
 .story-form-submission button:hover,
 .story-form-submission button:active {
     transform: translateY(-3px);
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 

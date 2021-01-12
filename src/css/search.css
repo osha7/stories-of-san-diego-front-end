@@ -66,6 +66,11 @@
     padding-left: 80px;
 }
 
+i:hover,
+i:active {
+    color: white;
+}
+
 /* ------------------------------------- */
 
 .search-story-cards {

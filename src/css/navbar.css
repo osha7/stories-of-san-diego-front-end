@@ -23,6 +23,7 @@
 .navbar__links:hover,
 .navbar__links:active {
     transform: translateY(-3px);
+    transition: all 0.5s ease;
 }
 
 .navbar-header {

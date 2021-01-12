@@ -51,9 +51,8 @@ export function Home(props) {
             </div>
             
             <div className="home-headers-2">
-                <Link to="/contact-us">
-                    <h3>Share YOUR Story with us</h3>
-                </Link>
+            <a href="/contact-us" alt="contact-list-signup"><p>Share YOUR Story with us</p></a>
+        
             </div>
         </>
     );

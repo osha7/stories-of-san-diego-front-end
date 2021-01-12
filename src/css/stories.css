@@ -221,10 +221,6 @@
     cursor: pointer;
 }
 
-.search_wrap__stories .search_box__stories .btn:hover {
-    background: rgba(206, 79, 39);
-}
-
 .search_wrap__stories .search_box__stories .btn.btn_common__stories .fa {
     position: absolute;
     top: 50%;
@@ -232,6 +228,11 @@
     transform: translate(-50%, -50%);
     color: rgba(206, 79, 39);
     font-size: 1.7em;
+}
+.search_wrap__stories .search_box__stories .btn.btn_common__stories .fa:hover {
+    background: rgba(206, 79, 39);
+    color: #fff;
+    padding: 0.6em;
 }
 
 .search_wrap .search_wrap_2 .search_box__stories .btn {
