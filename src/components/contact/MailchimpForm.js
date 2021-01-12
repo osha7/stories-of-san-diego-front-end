@@ -3,12 +3,12 @@ import Mailchimp from "react-mailchimp-form";
 
 function MailchimpForm(props) {
 
-    const MAILCHIMP_KEY = process.env.MAILCHIMP_KEY;
+    // const MAILCHIMP_KEY = process.env.MAILCHIMP_KEY;
     return (
         <div className="mail-chimp-form">
             <h2>SignUp For Our Emails</h2>
             <Mailchimp
-                action={MAILCHIMP_KEY}
+                action={process.env.REACT_APP_MAILCHIMP_KEY}
                 className="chimp-forms"
                 fields={[
                     {
