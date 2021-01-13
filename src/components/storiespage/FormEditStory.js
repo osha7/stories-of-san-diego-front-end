@@ -53,10 +53,15 @@ function FormEditStory(props) {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
+            console.log("props", props)
 
             if (data.id) {
-                setTimeout(function(){ alert("Thank you. Your story has been updated."); }, 1000);
+                setTimeout(function(){ alert("Thank you. Your story has been updated.") }, 500);
+                if (props) {
+                    setTimeout(function(){ props.closeModal() }, 1000);
+                    
+                }
             } else {
                 alert(data.error)
             }

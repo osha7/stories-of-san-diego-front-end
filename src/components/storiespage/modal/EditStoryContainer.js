@@ -5,7 +5,7 @@ import Modal from "./Modal";
 export const EditStoryContainer = (props) => {
     
     const [isShown, setIsShown] = useState(false)
-    let triggerButton
+    // let triggerButton
     let modal
     // let closeButton
     
@@ -17,7 +17,7 @@ export const EditStoryContainer = (props) => {
 
     const closeModal = () => {
         setIsShown(false)
-        triggerButton.focus();
+        // triggerButton.focus();
         toggleScrollLock();
     };
 
@@ -40,7 +40,7 @@ export const EditStoryContainer = (props) => {
             <React.Fragment>
                 <TriggerButton
                     showModal={showModal}
-                    buttonRef={(n) => (triggerButton = n)}
+                    // buttonRef={(n) => (triggerButton = n)}
                     triggerText={props.triggerText}
                 />
                 {isShown ? (
