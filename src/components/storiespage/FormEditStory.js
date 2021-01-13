@@ -34,26 +34,8 @@ function FormEditStory(props) {
         });
     };
 
-    // const editJob = (data) => {
-    //     //    console.log("EDIT JOB ACTION", data)
-    //         return (dispatch) => {
-    //             return fetch(`http://localhost:3000/jobs/${data.id}`, {
-    //                 method: "PUT",
-    //                 headers: {
-    //                     "Content-Type": "application/json",
-    //                     "Accept": "application/json"
-    //                 },
-    //                 body: JSON.stringify(data)
-    //             })
-    //             .then(resp => resp.json())
-    //             .then(jobObj => dispatch({type: EDIT_JOB, payload: jobObj}))
-    //         }
-    //     }
-
     const handleSubmit = (e) => {
-        // console.log("Dashboard Submit", userInput)
         e.preventDefault();
-        // debugger
         fetch(API_URL + `/stories/${id}`, {
             method: "PUT",
             headers: {
@@ -174,7 +156,6 @@ function FormEditStory(props) {
                         </div>
                         
                     </form>
-                    {/* <ImageUploads /> */}
                 </div>
             </div>
     );
