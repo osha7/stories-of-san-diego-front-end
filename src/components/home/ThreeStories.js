@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import StoriesDiv from '../storiespage/StoriesDiv'
 
 function ThreeStories(props) {
-  const latestStory = props.stories[props.stories.length - 1];
-  const secondLatestStory = props.stories[props.stories.length - 2];
-  const thirdLatestStory = props.stories[props.stories.length - 3];
+  const latestStory = props.stories[0];
+  const secondLatestStory = props.stories[1];
+  const thirdLatestStory = props.stories[2];
 
   const [latestStories] = useState([
     latestStory,
@@ -14,6 +14,7 @@ function ThreeStories(props) {
 
   return (
     <>
+    {console.log(props.stories[0])}
       <StoriesDiv stories={latestStories} />
     </>
   );
