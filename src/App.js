@@ -19,6 +19,7 @@ import MailchimpForm from './components/contact/MailchimpForm'
 import ContactForm from './components/contact/ContactForm'
 
 function App() {
+    
     return (
         <div className="App">
             {/* <div className="sharethis-inline-share-buttons">HERE</div> */}

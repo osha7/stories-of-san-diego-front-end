@@ -35,47 +35,46 @@ function FormEditStory(props) {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        fetch(API_URL + `/stories/${id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify({
-                transcriber,
-                contributor,
-                contact_email,
-                contact_phone,
-                summary,
-                story,
+        if (localStorage.getItem("token")) {
+            e.preventDefault();
+            fetch(API_URL + `/stories/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    transcriber,
+                    contributor,
+                    contact_email,
+                    contact_phone,
+                    summary,
+                    story,
+                })
             })
-        })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data)
-            console.log("props", props)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                // console.log("props", props)
 
-            if (data.id) {
-                setTimeout(function(){ alert("Thank you. Your story has been updated.") }, 500);
-                if (props) {
-                    setTimeout(function(){ props.closeModal() }, 1000);
-                    
+                if (data.id) {
+                    setTimeout(function(){ alert("Thank you. Your story has been updated.") }, 500);
+                    if (props) {
+                        setTimeout(function(){ props.closeModal() }, 1000);
+                        
+                    }
+                } else {
+                    alert(data.error)
                 }
-            } else {
-                alert(data.error)
-            }
 
-        })
-        
-
+            })
+        }
     };
 
     const momentDate = moment.parseZone(date).format("MMMM Do, YYYY")
 
     return (
         <div className="stories">
-                {console.log("admin-dashboard", storyData)}
                 <h1>Edit Story</h1>
                 <div className="story-form">
                     <form className="form-story-input" onSubmit={handleSubmit}>
@@ -156,9 +155,11 @@ function FormEditStory(props) {
                                 required
                             ></textarea>
                         </div>
-                        <div className="si-form">
-                            <input type="submit" className="form-button" value="Submit Edits" />
-                        </div>
+                        {localStorage.getItem("token") && (
+                            <div className="si-form">
+                                <input type="submit" className="form-button" value="Submit Edits" />
+                            </div>
+                        )}
                         
                     </form>
                 </div>

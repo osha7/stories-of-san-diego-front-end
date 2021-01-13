@@ -52,7 +52,9 @@ function Story(props) {
                     <span className="indiv-story-image__editor">
                         Edited By: {data.story.transcriber}
                     </span>
-                    <EditStoryContainer data={data} triggerText={triggerText} onSubmit={onSubmit} />
+                    {localStorage.getItem("token") && (
+                        <EditStoryContainer data={data} triggerText={triggerText} onSubmit={onSubmit} />
+                    )}
                 </div>
                 <br />
             </div>
