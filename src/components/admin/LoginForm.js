@@ -36,6 +36,10 @@ function LoginForm(props) {
         })
         .then(res => res.json())
         .then(data => {
+            // console.log("login data", data)
+            if (data.failure) {
+                alert(data.failure)
+            }
             localStorage.setItem("token", data.jwt)
             props.handleLogin(data.user)
         })

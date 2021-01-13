@@ -21,7 +21,11 @@ export function Admin(props) {
             })
             .then(res => res.json())
             .then(data => {
-                // console.log("data", data)
+                console.log("data", data)
+                console.log("errors", data.errors)
+                // if (data.errors) {
+                //     alert(data.errors)
+                // }
                 setUser(data)
                 // console.log("123", props)
                 // props.history.push("/admin-dashboard")
@@ -57,14 +61,11 @@ export function Admin(props) {
     // }
 
 
-    if (!user.username) {
+    if (user === undefined || !user.username) {
         return (
             <>
             {/* {console.log("NO user", user.username)} */}
                 <LoginForm handleLogin={handleLogin} handleLogout={handleLogout}/>
-                {/* <button onClick={handleLogout}>Log Out</button> */}
-                {/* <SignupForm handleLogin={handleLogin}/> */}
-                {/* <button onClick={handleAuthClick} className="ui button">Access Authorized Route</button> */}
             </>
         );
     } else {
