@@ -21,8 +21,8 @@ export function Admin(props) {
             })
             .then(res => res.json())
             .then(data => {
-                console.log("data", data)
-                console.log("errors", data.errors)
+                // console.log("data", data)
+                // console.log("errors", data.errors)
                 // if (data.errors) {
                 //     alert(data.errors)
                 // }

@@ -13,7 +13,7 @@ export function useFetchStory(id) {
             setData(fetchData);
         };
         fetchStory();
-    });
+    }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     return [data];
 }

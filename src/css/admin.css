@@ -224,7 +224,7 @@ h3 {
     transition: all 0.2s ease;
 }
 
-.files-upload {
+#files-upload {
     width: 25%;
     margin-left: 1em;
 }

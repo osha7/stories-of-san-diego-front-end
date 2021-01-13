@@ -9,6 +9,7 @@
     "cloudinary": "^1.23.0",
     "cloudinary-react": "^1.6.8",
     "emailjs-com": "^2.6.4",
+    "focus-trap-react": "^8.3.2",
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
