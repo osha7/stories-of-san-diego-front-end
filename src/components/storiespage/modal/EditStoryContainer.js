@@ -1,24 +1,31 @@
 import React, { useState } from "react";
-import TriggerButton from "./EditStoryTriggerButton";
+import EditStoryTriggerButton from "../EditStoryTriggerButton";
+import DeleteButton from "../DeleteButton";
+import EditImageButton from "../EditImageButton";
 import Modal from "./Modal";
-import DeleteButton from '../DeleteButton'
-import EditImageButton from '../EditImageButton'
+import ImageModal from "./ImageModal";
 
 export const EditStoryContainer = (props) => {
-    
-    const [isShown, setIsShown] = useState(false)
+    const [isShown, setIsShown] = useState(false);
+    const [isImageEditModalShown, setIsImageEditModalShown] = useState(false);
     // let triggerButton
-    let modal
+    let modal;
     // let closeButton
-    
+
     const showModal = () => {
-        setIsShown(true) 
+        setIsShown(true);
         // closeButton.focus()
         toggleScrollLock();
     };
 
+    const showImageEditModal = () => {
+        setIsImageEditModalShown(true);
+        toggleScrollLock();
+    };
+
     const closeModal = () => {
-        setIsShown(false)
+        setIsShown(false);
+        setIsImageEditModalShown(false);
         // triggerButton.focus();
         toggleScrollLock();
     };
@@ -38,29 +45,55 @@ export const EditStoryContainer = (props) => {
         document.querySelector("html").classList.toggle("scroll-lock");
     };
 
-        return (
-            <div className="edit-story-div">
-                <TriggerButton
-                    showModal={showModal}
-                    // buttonRef={(n) => (triggerButton = n)}
-                    triggerText={props.triggerText}
-                />
-                <DeleteButton id={props.data.id} history={props.history}/>
-                <EditImageButton id={props.data.id} />
-                {isShown ? (
-                    console.log("editcontainer", props),
-                    <Modal
-                        onSubmit={props.onSubmit}
-                        modalRef={(n) => (modal = n)}
-                        // buttonRef={(n) => (closeButton = n)}
-                        closeModal={closeModal}
-                        onKeyDown={onKeyDown}
-                        onClickOutside={onClickOutside}
-                        data={props.data}
-                    />
-                ) : null}
-            </div>
-        );
-    }
+    return (
+        <div className="edit-story-div">
+            <EditStoryTriggerButton
+                showModal={showModal}
+                triggerText={props.triggerText}
+                // buttonRef={(n) => (triggerButton = n)}
+            />
+            <DeleteButton
+                id={props.data.id}
+                history={props.history}
+            />
+            <EditImageButton
+                showImageEditModal={showImageEditModal}
+                editImageTriggerText={props.editImageTriggerText}
+                // buttonRef={(n) => (triggerButton = n)}
+            />
+            {isShown
+                ? (console.log("editcontainer", props),
+                    (
+                        <Modal
+                            onSubmit={props.onSubmit}
+                            modalRef={(n) => (modal = n)}
+                            // buttonRef={(n) => (closeButton = n)}
+                            closeModal={closeModal}
+                            onKeyDown={onKeyDown}
+                            onClickOutside={onClickOutside}
+                            data={props.data}
+                        />
+                    ))
+                : null
+            }
+            {isImageEditModalShown
+                ?
+                    (
+                        <ImageModal
+                            onSubmit={props.onSubmit}
+                            modalRef={(n) => (modal = n)}
+                            // buttonRef={(n) => (closeButton = n)}
+                            closeModal={closeModal}
+                            onKeyDown={onKeyDown}
+                            onClickOutside={onClickOutside}
+                            data={props.data}
+                        />
+                    )
+                : null
+            }
 
-    export default EditStoryContainer;
+        </div>
+    );
+};
+
+export default EditStoryContainer;

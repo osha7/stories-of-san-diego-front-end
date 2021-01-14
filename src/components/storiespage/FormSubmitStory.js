@@ -31,9 +31,10 @@ function FormSubmitStory(props) {
     };
 
     const onChange = (e) => {
+        console.log(e.target.files[0])
         e.persist()
         setUserInput({
-                [e.target.name]: e.target.files[0]
+            [e.target.name]: e.target.files[0]
         })
     }
 
@@ -88,7 +89,7 @@ function FormSubmitStory(props) {
     };
 
     const imageSubmit = (e, id) => {
-        // debugger
+        debugger
         e.preventDefault()
         // console.log("onSubmit here")
         let body = new FormData()

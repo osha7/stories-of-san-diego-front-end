@@ -1,17 +1,13 @@
 import React from 'react';
 
-function EditImageButton(props) {
-
-    const handleOnClick = () => {
-        console.log(props)
-    }
-
+const EditImageButton = ({showImageEditModal, buttonRef, editImageTriggerText}) => {
     return (
         <button
             className="btn-edit"
-            onClick={handleOnClick}
+            ref={buttonRef}
+            onClick={showImageEditModal}
         >
-            EDIT IMAGE
+            {editImageTriggerText}
         </button>
     );
 }

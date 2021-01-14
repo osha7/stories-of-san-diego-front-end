@@ -7,6 +7,7 @@ function Story(props) {
     const id = props.match.params.id;
 
     const triggerText = "Edit Story";
+    const editImageTriggerText = "Edit Image"
 
     const [data, setData] = useState({ stories: [] });
     const storiesURL = "/stories/";
@@ -65,6 +66,7 @@ function Story(props) {
                         <EditStoryContainer
                             data={data}
                             triggerText={triggerText}
+                            editImageTriggerText={editImageTriggerText}
                             onSubmit={onSubmit}
                             history={props.history}
                         />
