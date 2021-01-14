@@ -1,6 +1,6 @@
 import React from "react";
 
-const TriggerButton = ({ triggerText, buttonRef, showModal }) => {
+const EditStoryTriggerButton = ({ triggerText, buttonRef, showModal }) => {
     return (
         <button
             className="btn-edit"
@@ -12,4 +12,4 @@ const TriggerButton = ({ triggerText, buttonRef, showModal }) => {
     );
 };
 
-export default TriggerButton;
+export default EditStoryTriggerButton;

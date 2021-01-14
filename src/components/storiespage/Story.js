@@ -1,54 +1,64 @@
-import { useFetchStory } from "../storiespage/useFetchStory";
 import moment from "moment";
 import EditStoryContainer from "./modal/EditStoryContainer";
+import React, { useState, useEffect } from 'react'
+import { API_URL } from '../../constants'
 
 function Story(props) {
     const id = props.match.params.id;
- 
-
-    const [data] = useFetchStory(id);
 
     const triggerText = "Edit Story";
 
-    const onSubmit = (event) => {
-        event.preventDefault(event);
+    const [data, setData] = useState({ stories: [] });
+    const storiesURL = "/stories/";
+    const story_id = id;
+
+    useEffect(() => {
+        const fetchStory = async () => {
+            const response = await fetch(API_URL + storiesURL + story_id);
+            const fetchData = await response.json();
+            console.log(fetchData.story)
+            setData(fetchData.story);
+        };
+        fetchStory();
+    }, []);// eslint-disable-line react-hooks/exhaustive-deps
+
+    const onSubmit = (data) => {
+        setData(data)
     };
 
-    if (data.story) {
+    if (data) {
         return (
             <div>
-                {/* {console.log("individual story", data.story)} */}
-
                 <div className="indiv-story-image">
                     <img
-                        src={data.story.image}
-                        alt={data.story.contributor}
+                        src={data.image}
+                        alt={data.contributor}
                         className="indiv-story-image__image"
                     />
                 </div>
                 <div className="indiv-story-image__header">
-                    <h2>{data.story.summary}</h2>
+                    <h2>{data.summary}</h2>
                 </div>
                 <br />
                 <div className="indiv-story-image__contributor">
                     <span className="indiv-story-image__contributor">
-                        {data.story.contributor}
+                        {data.contributor}
                     </span>
                 </div>
                 <br />
                 <div className="indiv-story-image__story">
-                    <p>{data.story.story}</p>
+                    <p>{data.story}</p>
 
                     <br />
                     <span className="indiv-story-image__date">
                         Originally Posted:{" "}
                         {moment
-                            .parseZone(data.story.date)
+                            .parseZone(data.date)
                             .format("MMMM Do, YYYY")}
                     </span>
                     <br />
                     <span className="indiv-story-image__editor">
-                        Edited By: {data.story.transcriber}
+                        Edited By: {data.transcriber}
                     </span>
                     {localStorage.getItem("token") && (
                         <EditStoryContainer

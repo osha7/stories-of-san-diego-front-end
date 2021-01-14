@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TriggerButton from "./TriggerButton";
+import TriggerButton from "./EditStoryTriggerButton";
 import Modal from "./Modal";
 import DeleteButton from '../DeleteButton'
 import EditImageButton from '../EditImageButton'
