@@ -81,6 +81,7 @@
 .button-container a:active {
     transform: translateY(-3px);
     box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
 }
 
 .story-image {
@@ -243,4 +244,26 @@
 
 .search_wrap__stories .search_wrap_2__stories .search_box__stories .input {
     padding-left: 80px;
+}
+
+.edit-story-div {
+    width: 90%;
+}
+
+.btn-edit {
+    background-color: rgba(206, 79, 39);
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    margin: 0 auto;
+    /* margin-left: -8%; */
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-edit:active {
+    transform: translateY(-3px);
+    box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
 }

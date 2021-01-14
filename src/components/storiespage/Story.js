@@ -1,10 +1,10 @@
 import { useFetchStory } from "../storiespage/useFetchStory";
 import moment from "moment";
-import EditStoryContainer from './modal/EditStoryContainer'
+import EditStoryContainer from "./modal/EditStoryContainer";
 
 function Story(props) {
-    // console.log("fetchStory", props)
     const id = props.match.params.id;
+ 
 
     const [data] = useFetchStory(id);
 
@@ -12,8 +12,6 @@ function Story(props) {
 
     const onSubmit = (event) => {
         event.preventDefault(event);
-        // console.log(event.target.name.value);
-        // console.log(event.target.email.value);
     };
 
     if (data.story) {
@@ -53,7 +51,11 @@ function Story(props) {
                         Edited By: {data.story.transcriber}
                     </span>
                     {localStorage.getItem("token") && (
-                        <EditStoryContainer data={data} triggerText={triggerText} onSubmit={onSubmit} />
+                        <EditStoryContainer
+                            data={data}
+                            triggerText={triggerText}
+                            onSubmit={onSubmit}
+                        />
                     )}
                 </div>
                 <br />

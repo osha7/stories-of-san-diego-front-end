@@ -3,7 +3,7 @@ import React from "react";
 const TriggerButton = ({ triggerText, buttonRef, showModal }) => {
     return (
         <button
-            className="btn btn-lg btn-danger center modal-button"
+            className="btn-edit"
             ref={buttonRef}
             onClick={showModal}
         >

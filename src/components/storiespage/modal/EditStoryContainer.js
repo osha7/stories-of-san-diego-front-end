@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import TriggerButton from "./TriggerButton";
 import Modal from "./Modal";
+import DeleteButton from '../DeleteButton'
+import EditImageButton from '../EditImageButton'
 
 export const EditStoryContainer = (props) => {
     
@@ -37,12 +39,14 @@ export const EditStoryContainer = (props) => {
     };
 
         return (
-            <React.Fragment>
+            <div className="edit-story-div">
                 <TriggerButton
                     showModal={showModal}
                     // buttonRef={(n) => (triggerButton = n)}
                     triggerText={props.triggerText}
                 />
+                <DeleteButton id={props.id} />
+                <EditImageButton id={props.id} />
                 {isShown ? (
                     <Modal
                         onSubmit={props.onSubmit}
@@ -54,7 +58,7 @@ export const EditStoryContainer = (props) => {
                         data={props.data}
                     />
                 ) : null}
-            </React.Fragment>
+            </div>
         );
     }
 

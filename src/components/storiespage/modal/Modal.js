@@ -39,7 +39,7 @@ export const Modal = ({
                         </svg>
                     </button>
                     <div className="modal-body">
-                        <FormEditStory onSubmit={onSubmit} data={data} closeModal={closeModal}/>
+                        <FormEditStory onSubmit={onSubmit} data={data} closeModal={closeModal} />
                     </div>
                 </div>
             </aside>

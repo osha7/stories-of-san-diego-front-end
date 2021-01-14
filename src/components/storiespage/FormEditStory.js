@@ -1,10 +1,12 @@
-import React, { useReducer } from "react";
+import React, { useState, useReducer } from "react";
 import { API_URL } from '../../constants';
 import moment from "moment";
 
 function FormEditStory(props) {
 
-    const storyData = props.data.story
+    // const storyData = props.data.story
+    const [storyData, setStoryData] = useState(props.data.story)
+
 
     const [userInput, setUserInput] = useReducer(
         (state, newState) => ({...state, ...newState}), {
@@ -61,8 +63,9 @@ function FormEditStory(props) {
                     setTimeout(function(){ alert("Thank you. Your story has been updated.") }, 500);
                     if (props) {
                         setTimeout(function(){ props.closeModal() }, 1000);
-                        
+                        // debugger
                     }
+                    setStoryData(data)
                 } else {
                     alert(data.error)
                 }
