@@ -45,9 +45,10 @@ export const EditStoryContainer = (props) => {
                     // buttonRef={(n) => (triggerButton = n)}
                     triggerText={props.triggerText}
                 />
-                <DeleteButton id={props.id} />
-                <EditImageButton id={props.id} />
+                <DeleteButton id={props.data.id} history={props.history}/>
+                <EditImageButton id={props.data.id} />
                 {isShown ? (
+                    console.log("editcontainer", props),
                     <Modal
                         onSubmit={props.onSubmit}
                         modalRef={(n) => (modal = n)}

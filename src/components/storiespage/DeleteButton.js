@@ -4,13 +4,14 @@ import { API_URL } from "../../constants";
 import { confirmAlert } from "react-confirm-alert";
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-const DeleteButton = ({ id }) => {
+const DeleteButton = (props) => {
     
-    const storyURL = `/stories/${id}`;
+    const storyURL = `/stories/${props.id}`;
 
     
     const handleOnClick = () => {
-        console.log("in handleOnClick")
+        // console.log("in handleOnClick")
+        console.log("delete", props)
         confirmAlert({
             title: "CAUTION !!!!",
             message:
@@ -30,7 +31,7 @@ const DeleteButton = ({ id }) => {
     };
 
     const deleteSection = () => {
-        console.log("delete", id)
+        console.log("delete", props)
         if (localStorage.getItem("token")) {
             const fetchStory = async () => {
                 const response = await fetch(API_URL + storyURL, {
@@ -42,6 +43,7 @@ const DeleteButton = ({ id }) => {
             };
             fetchStory()
         }
+        props.history.push("/stories")
     }
 
     return (
