@@ -30,12 +30,21 @@ function Contributors(props) {
                 </>
             )
         })
-        return (
-            <>
-                {contributors1}
-            </>
-        );
-    
+        if (contributors1) {
+            return (
+                <>
+                    {contributors1}
+                </>
+            );
+        } else {
+            return (
+                <div className="loading">
+                    <h1>Loading</h1>
+                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+            )
+        }
+        
 }
 
 export default Contributors;
