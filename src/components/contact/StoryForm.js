@@ -102,6 +102,7 @@ function StoryForm() {
 
                 <div>
                     <button type='submit'>SUBMIT / ENVIAR</button>
+                    <p>BY SUBMITTING YOUR STORY WITH US, YOU AGREE TO OUR USER AGREEMENT AND PRIVACY POLICY</p>
                 </div>
             </form>
             

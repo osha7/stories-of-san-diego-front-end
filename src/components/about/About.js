@@ -2,6 +2,7 @@
 // rfce
 import React from 'react';
 import "../../css/about.css";
+import Contributors from './Contributors';
 
 export function About() {
     
@@ -34,7 +35,8 @@ export function About() {
             </div>
             <div className="about-divider"> </div>
             <div className="people">
-                <section className="individual-cards">
+                <Contributors /> 
+                {/* <section className="individual-cards">
                     <img src="https://i.imgur.com/bXzkn6l.jpg" alt="" className="individual-image" />
                     <span>
                     <h2>Samantha Jones</h2>
@@ -81,7 +83,7 @@ export function About() {
                         <h2>Samantha Jones</h2>
                         <p className="">Tempor dolore anim eu non ex ut eiusmod enim culpa aliqua. Aute dolore aliquip sint velit ut ullamco culpa. Duis voluptate anim est et irure ex duis nisi fugiat velit commodo. Et sint irure quis dolor eiusmod. Fugiat non elit enim ad deserunt irure dolore Lorem ad laboris Lorem laboris qui do.</p>
                     </span>
-                </section>
+                </section> */}
             </div>
         </>
     )
