@@ -20,7 +20,6 @@ function LoginForm(props) {
     }
 
     const handleSubmit = (e) => {
-        // console.log("Handle Submit")
         e.preventDefault()
         fetch(API_URL + '/login', {
             method: "POST",
@@ -36,7 +35,6 @@ function LoginForm(props) {
         })
         .then(res => res.json())
         .then(data => {
-            // console.log("login data", data)
             if (data.failure) {
                 alert(data.failure)
             }

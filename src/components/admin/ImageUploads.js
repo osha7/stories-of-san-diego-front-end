@@ -19,7 +19,6 @@ class ImageUploads extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault()
-        // console.log("onSubmit here")
         let body = new FormData()
         body.append("image", this.state.image)
         body.append("id", this.props.id)
@@ -29,10 +28,8 @@ class ImageUploads extends React.Component {
         })
         .then(res => res.json())
         .then(json => {
-            // console.log("put fetch", json)
         })
         .catch(error => {
-            // console.log("Avatar upload error:", error)
         })
     }
     render() {

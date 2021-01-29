@@ -88,9 +88,6 @@ function StoryForm() {
                 </div>
 
                 <div className="story-form-field">
-                    {/* <label for="image">LINK TO IMAGE. (WE  CAN'T ACCEPT FILES AT THIS TIME) / ENLACE A LA IMAGEN. (NO PODEMOS ACEPTAR ARCHIVOS EN ESTE MOMENTO): </label> */}
-                    {/* <input id="image" type="text" name="image" className="" /> <br />
-                    <span>Good sites to host images: <a href="https://cloudinary.com/">Cloudinary</a> or <a href="https://imgur.com/">Imgur</a></span> */}
                     <label>IMAGE / FOTO: </label>
                     <input type="file" name="imageFile" id="imageFile" />
                 </div>

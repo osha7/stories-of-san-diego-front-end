@@ -17,7 +17,6 @@ function Story(props) {
         const fetchStory = async () => {
             const response = await fetch(API_URL + storiesURL + story_id);
             const fetchData = await response.json();
-            // console.log(fetchData.story)
             setData(fetchData.story);
         };
         fetchStory();
@@ -30,7 +29,6 @@ function Story(props) {
     if (data) {
         return (
             <div>
-                {console.log("story", props.history)}
                 <div className="indiv-story-image">
                     <img
                         src={data.image}

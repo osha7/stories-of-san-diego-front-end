@@ -10,8 +10,6 @@ const DeleteButton = (props) => {
 
     
     const handleOnClick = () => {
-        // console.log("in handleOnClick")
-        console.log("delete", props)
         confirmAlert({
             title: "CAUTION !!!!",
             message:
@@ -31,7 +29,6 @@ const DeleteButton = (props) => {
     };
 
     const deleteSection = () => {
-        console.log("delete", props)
         if (localStorage.getItem("token")) {
             const fetchStory = async () => {
                 const response = await fetch(API_URL + storyURL, {
@@ -39,7 +36,6 @@ const DeleteButton = (props) => {
                 })
                 const fetchData = await response.json();
                 console.log("fetchData Delete", fetchData)
-                // setData(fetchData);
             };
             fetchStory()
         }

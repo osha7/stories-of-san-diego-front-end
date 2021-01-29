@@ -1,5 +1,5 @@
 .navbar {
-    padding: 4em 4em 0 2em;
+    padding: 5em 4em 0 2em;
     border-bottom: 5px solid rgba(0, 115, 181);
     display: flex;
 }
@@ -8,7 +8,7 @@
     grid-column: full-start / full-end;
     flex: 1;
     font-size: 1.4em;
-    margin-right: -3em;
+    margin-right: -9em;
     margin-top: -1em;
 }
 
@@ -45,4 +45,26 @@ ion-icon {
     color: rgba(206, 79, 39);
     margin-left: -2em;
     --ionicon-stroke-width: 3em;
+}
+
+.subtext-button {
+    /* background-color: rgba(0, 115, 181); */
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 1em;
+}
+
+.subtext-button button {
+    background-color: rgba(0, 115, 181);
+    color: white;
+    padding: 0.5em;
+    font-size: 0.85em;
+    border-radius: 0.5em;
+}
+
+.subtext-button button:hover,
+.subtext-button button:active {
+    transform: translateY(-3px);
+    box-shadow: -0.25em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
 }

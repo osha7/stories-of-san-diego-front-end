@@ -29,18 +29,12 @@ export function Stories(props) {
     }
 
     const howManyPages = Math.ceil(stories.length / storiesPerPage);
-    // console.log("indexOfLastStory", indexOfLastStory)
-    // console.log("indexOfFirstStory", indexOfFirstStory)
-    // console.log("currentStories", currentStories)
-    // console.log("howManyPages", howManyPages)
-    // console.log("story props", props)
 
     const storiesFilterOnChange = (e) => {
         e.preventDefault();
         let values = e.target.value;
         setSearchTerm(values);
         let valuesSplit = values.split(" ");
-        console.log("valuesSplit", valuesSplit);
         setSearchTerms(valuesSplit);
 
         const filteredStories = [];

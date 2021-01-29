@@ -9,11 +9,11 @@ export function About() {
     return (
         <>
             <div className="about-header">
-                <h1>About Stories</h1> 
+                <h1>About Stories Of San Diego</h1> 
             </div>
             <div className="about-container">
                 <div className="about-image">
-                    {/* <img src={AboutPhoto} alt="" className="" width="500" /> */}
+                    {/* image uploaded through CSS */}
                 </div>
             
                 <p>
@@ -36,54 +36,6 @@ export function About() {
             <div className="about-divider"> </div>
             <div className="people">
                 <Contributors /> 
-                {/* <section className="individual-cards">
-                    <img src="https://i.imgur.com/bXzkn6l.jpg" alt="" className="individual-image" />
-                    <span>
-                    <h2>Samantha Jones</h2>
-                    <p className="">Nulla anim velit culpa proident do commodo nostrud anim ex sunt ex. Est voluptate aliquip proident deserunt esse adipisicing veniam reprehenderit id enim. Nostrud elit officia minim aliquip aute veniam qui ad culpa officia velit.</p>
-                    </span>
-                </section>
-                <div className="about-divider-2"> </div>
-                <section className="individual-cards">
-                    <img src="https://i.imgur.com/ybCJTTc.jpg" alt="" className="individual-image" />
-                    <span>
-                    <h2>David Jones</h2>
-                    <p className="">Officia do laboris dolor non. Veniam enim ullamco do ut elit anim dolore id proident ut et sint laborum voluptate. Incididunt aliquip commodo quis cillum quis do culpa eiusmod laborum. Nostrud qui minim sit duis ex dolore. Amet irure do sint do sit ex ad. Eiusmod enim sunt consectetur pariatur aliqua.</p>
-                    </span>
-                </section>
-                <div className="about-divider-2"> </div>
-                
-                <section className="individual-cards">
-                    <img src="https://i.imgur.com/kYT6Irz.jpg" alt="" className="individual-image" />
-                    <span>
-                        <h2>Samantha Jones</h2>
-                        <p className="">Eiusmod exercitation consequat amet cillum deserunt fugiat non ad elit enim labore do. Ad mollit proident nostrud quis nulla. Ut mollit nulla adipisicing labore voluptate ex esse dolore.</p>
-                    </span>
-                </section>
-                <div className="about-divider-2"> </div>
-                <section className="individual-cards">
-                    <img src="https://i.imgur.com/sEjbsDi.jpg" alt="" className="individual-image" />
-                    <span>
-                        <h2>David Jones</h2>
-                        <p className="">Minim et quis quis ea sunt eu in ex labore Lorem deserunt nisi sint amet. Ex et dolore officia cupidatat eiusmod et esse. Aliqua commodo quis ut ea est minim minim nostrud culpa tempor qui labore occaecat. In ex pariatur cillum cillum veniam consequat eu labore officia magna. Culpa sit nisi dolor commodo exercitation nisi irure sint exercitation amet.</p>
-                    </span>
-                </section>
-                <div className="about-divider-2"> </div>
-                <section className="individual-cards">
-                    <img src="https://i.imgur.com/wPR2HaO.jpg" alt="" className="individual-image" />
-                    <span>
-                        <h2>Samantha Jones</h2>
-                        <p className="">Ut labore laboris velit non ad incididunt do laborum magna aute culpa id eu. Voluptate voluptate ad ad eu tempor duis esse. Aute occaecat fugiat excepteur qui commodo aliqua eu. Reprehenderit ad quis cupidatat dolor sit incididunt consectetur. Excepteur id elit exercitation veniam veniam.</p>
-                    </span>
-                </section>
-                <div className="about-divider-2"> </div>
-                <section className="individual-cards">
-                    <img src="https://i.imgur.com/COUkfn0.jpg" alt="" className="individual-image" />
-                    <span>
-                        <h2>Samantha Jones</h2>
-                        <p className="">Tempor dolore anim eu non ex ut eiusmod enim culpa aliqua. Aute dolore aliquip sint velit ut ullamco culpa. Duis voluptate anim est et irure ex duis nisi fugiat velit commodo. Et sint irure quis dolor eiusmod. Fugiat non elit enim ad deserunt irure dolore Lorem ad laboris Lorem laboris qui do.</p>
-                    </span>
-                </section> */}
             </div>
         </>
     )

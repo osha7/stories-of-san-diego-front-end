@@ -4,7 +4,6 @@ import moment from "moment";
 
 function FormEditStory(props) {
 
-    // const storyData = props.data.story
     const [storyData, setStoryData] = useState(props.data)
 
 
@@ -30,7 +29,6 @@ function FormEditStory(props) {
     const story = userInput.story;
 
     const handleOnChange = (e) => {
-        // console.log(e)
         setUserInput({
             [e.target.name]: e.target.value,
         });
@@ -56,16 +54,12 @@ function FormEditStory(props) {
             })
             .then(res => res.json())
             .then(data => {
-                // console.log(data)
-                // console.log("props", props)
 
                 if (data.id) {
                     setTimeout(function(){ alert("Thank you. Your story has been updated.") }, 500);
-                    console.log("submitofedit", data)
                     props.onSubmit(data)
                     if (props) {
                         setTimeout(function(){ props.closeModal() }, 1000);
-                        // debugger
                     }
                     setStoryData(data)
                 } else {

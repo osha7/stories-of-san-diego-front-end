@@ -62,7 +62,7 @@ export const EditStoryContainer = (props) => {
                 // buttonRef={(n) => (triggerButton = n)}
             />
             {isShown
-                ? (console.log("editcontainer", props),
+                ? 
                     (
                         <Modal
                             onSubmit={props.onSubmit}
@@ -73,7 +73,7 @@ export const EditStoryContainer = (props) => {
                             onClickOutside={onClickOutside}
                             data={props.data}
                         />
-                    ))
+                    )
                 : null
             }
             {isImageEditModalShown

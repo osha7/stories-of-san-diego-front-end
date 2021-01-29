@@ -24,14 +24,12 @@ function FormSubmitStory(props) {
     const image = userInput.image;
 
     const handleOnChange = (e) => {
-        // console.log(e)
         setUserInput({
             [e.target.name]: e.target.value,
         });
     };
 
     const onChange = (e) => {
-        console.log(e.target.files[0])
         e.persist()
         setUserInput({
             [e.target.name]: e.target.files[0]
@@ -39,9 +37,7 @@ function FormSubmitStory(props) {
     }
 
     const handleSubmit = (e) => {
-        // console.log("Dashboard Submit", userInput)
         e.preventDefault();
-        // debugger
         fetch(API_URL + '/create', {
             method: "POST",
             headers: {
@@ -56,12 +52,10 @@ function FormSubmitStory(props) {
                 contact_phone,
                 summary,
                 story,
-                // image
             })
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
 
             if (data.id) {
                 const id = data.id
@@ -76,7 +70,6 @@ function FormSubmitStory(props) {
                     story: "",
                     image: null,
                 })
-                // debugger
                 document.getElementById('files-upload').value = null
                 setTimeout(function(){ alert("Thank you. Story Successfully Submitted"); }, 1000);
             } else {
@@ -89,9 +82,7 @@ function FormSubmitStory(props) {
     };
 
     const imageSubmit = (e, id) => {
-        debugger
         e.preventDefault()
-        // console.log("onSubmit here")
         let body = new FormData()
         body.append("image", image)
         body.append("id", id)
@@ -101,16 +92,13 @@ function FormSubmitStory(props) {
         })
         .then(res => res.json())
         .then(json => {
-            // console.log("put fetch", json)
         })
         .catch(error => {
-            // console.log("Avatar upload error:", error)
         })
     }
 
     return (
         <div className="stories">
-                {/* {console.log("admin-dashboard", props)} */}
                 <h1>Submit A Story Here</h1>
                 <div className="story-form">
                     <form className="form-story-input" onSubmit={handleSubmit}>

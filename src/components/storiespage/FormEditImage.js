@@ -8,16 +8,13 @@ const [image, setImage] = useState(props.data.image)
 const id = props.data.id
 
 const handleOnChange = (e) => {
-    console.log(e.target.files[0])
     setImage({
         [e.target.name]: e.target.files[0]
     });
 };
 
 const handleSubmit = (e) => {
-    // debugger
     e.preventDefault()
-    // console.log("onSubmit here")
     let body = new FormData()
     body.append("image", image.image)
     body.append("id", id)
@@ -27,13 +24,11 @@ const handleSubmit = (e) => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log("put fetch", data)
         if (data.id) {
             setTimeout(function(){ alert("Thank you. Your image has been updated.") }, 500);
             props.onSubmit(data)
             if (props) {
                 setTimeout(function(){ props.closeModal() }, 1000);
-                // debugger
             }
             setImage(data.image)
         } else {
@@ -41,7 +36,6 @@ const handleSubmit = (e) => {
         }
     })
     .catch(error => {
-        // console.log("Avatar upload error:", error)
     })
 }
 
@@ -49,7 +43,6 @@ const handleSubmit = (e) => {
 
     return (
         <div className="stories">
-            {console.log("edit image", props)}
                 <h1>Edit Image</h1>
                
                 <div className="story-form">

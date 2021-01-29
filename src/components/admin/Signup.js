@@ -39,7 +39,6 @@ function Signup(props) {
         })
         .then(res => res.json())
         .then(data => {
-            // console.log(data, data.jwt)
             if (data.jwt) {
                 localStorage.setItem("token", data.jwt)
                 props.handleLogin ? props.handleLogin(data.user) : handleLogin(data.user)

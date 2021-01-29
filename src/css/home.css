@@ -43,22 +43,6 @@
     }
 }
 
-/* .home-headers-2 a {
-    text-decoration: none;
-} */
-
-/* .home-headers-2 h3 {
-    color: rgba(206, 79, 39);
-    margin-bottom: 2em;
-} */
-
-/* @media screen and (max-width: 500px) {
-    .home-headers h3 {
-        padding-right: 2em;
-        padding-left: 2em;
-    }
-} */
-
 .home-headers-2 {
     margin: 2em;
 }

@@ -16,7 +16,6 @@ function Search() {
         let values = e.target.value
         setSearchTerm(values)
         let valuesSplit = values.split(" ")
-        console.log("valuesSplit", valuesSplit)
         setSearchTerms(valuesSplit)
     };
 
@@ -51,11 +50,7 @@ function Search() {
                             src={story.image}
                             alt={story.contributor}
                         />
-                        {/* {console.log("stories", story)} */}
                         <Link to={'/stories/' + story.id} story_id={story.id} >Read More</Link>
-                        {/* <a href="#" alt="Read More">
-                            Read More
-                        </a> */}
                     </div>
                     <div className="story-summary">
                         <h4>{story.summary}</h4>

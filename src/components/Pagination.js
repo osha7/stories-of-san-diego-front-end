@@ -60,7 +60,6 @@ function Pagination({pages=1, setCurrentPage}) {
                         onClick = {() => setCurrentButton((prev) => prev === 1 ? prev : prev - 1)}
                     >Prev</button>
                     {/* ----------all other buttons----------- */}
-                    {/* { console.log("arrOfCurrButtons", arrOfCurrButtons)} */}
                     {arrOfCurrButtons.map((page, index) => {
                         if(page === '...' || page === ' ...' || page === '... ') {
                             return (<div className="dots">...</div>)
